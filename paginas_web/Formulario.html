@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Therapy - Formulário</title>
+  <link rel="stylesheet" href="formulario.css">
+</head>
+<body>
+
+
+  <nav class="navbar">
+    <div class="navbar-um">
+      <img src="FiveIcon/favicon.ico" alt="Logo Therapy" class="logo-img">
+      <span class="navbar-title">Therapy</span>
+    </div>
+    <div class="navbar-links">
+      <a href="#">Home</a>
+      <a href="#">Atendimento</a>
+      <a href="#">Especialistas</a>
+      <a href="#">Sobre Nós</a>
+    </div>
+  </nav>
+
+
+  <!-- obs.: aproveitar para outro fomulário -->
+  <h1 class="titulo_Principal">Preencha o Formulário Abaixo</h1>
+  <div class="form-container">
+    <div class="form-title">Sobre Você</div>
+    <form>
+      <div class="form-grid">
+        <div>
+          <div class="form-group">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" name="senha" required>
+          </div>
+          <div class="form-group">
+            <label for="telefone">Telefone</label>
+            <input type="text" id="telefone" name="telefone">
+          </div>
+          <div class="form-group">
+            <label for="genero">Gênero</label>
+            <input type="text" id="genero" name="genero">
+          </div>
+        </div>
+        <div class="cpf-section">
+          <div class="form-group">
+            <label for="cpf">CPF</label>
+            <input type="text" id="cpf" name="cpf">
+          </div>
+          <div class="cpf-checkbox">
+            <input type="checkbox" id="estrangeiro" name="estrangeiro">
+            <label for="estrangeiro">Sou pessoa estrangeira, não tenho CPF</label>
+          </div>
+        </div>
+      </div>
+      <div class="form-footer">
+        <input type="checkbox" id="termos" name="termos" required>
+        <label for="termos">
+          Você concorda com nossos termos de <a href="#">privacidade</a> e <a href="#">política</a>
+        </label>
+      </div>
+      <button type="submit" class="submit-btn">Enviar Cadastro</button>
+    </form>
+  </div>
+  <br><br>
+</body>
+</html>

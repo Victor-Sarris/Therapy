@@ -28,8 +28,14 @@
         <label><input type="radio" name="role"> <span>Paciente</span></label>
       </div>
       <form>
-        <input type="email" placeholder="Email" required>
-        <input type="password" placeholder="Senha" required>
+        <div class="form-group">
+          <input type="email" id="email" placeholder=" " required>
+          <label for="email">Email</label>
+        </div>
+        <div class="form-group">
+          <input type="password" id="senha" placeholder=" " required>
+          <label for="senha">Senha</label>
+        </div>
         <button type="submit">Entrar</button>
       </form>
       <p class="signup-link">Não possui uma conta? <a href="cadastro.html">Cadastre-se</a></p>

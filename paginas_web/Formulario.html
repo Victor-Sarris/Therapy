@@ -23,8 +23,8 @@
     </div>
   </nav>
 
-
-  <!-- obs.: aproveitar para outro fomulário -->
+  <div class="section-form">
+    <!-- obs.: aproveitar para outro fomulário -->
   <h1 class="titulo_Principal">Preencha o Formulário Abaixo</h1>
   <div class="form-container">
     <div class="form-title">Sobre Você</div>
@@ -32,30 +32,36 @@
       <div class="form-grid">
         <div>
           <div class="form-group">
+            <input type="text" id="nome" placeholder=" " name="nome" required>
             <label for="nome">Nome</label>
-            <input type="text" id="nome" name="nome" required>
           </div>
           <div class="form-group">
+            <input type="email" id="email" placeholder=" " name="email" required>
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
           </div>
           <div class="form-group">
+            <input type="password" id="senha" placeholder=" " name="senha" required>
             <label for="senha">Senha</label>
-            <input type="password" id="senha" name="senha" required>
           </div>
           <div class="form-group">
+            <input type="text" id="telefone" placeholder=" " name="telefone">
             <label for="telefone">Telefone</label>
-            <input type="text" id="telefone" name="telefone">
           </div>
-          <div class="form-group">
+
+          <div class="form-group">            
+            <select id="genero" required>
+              <option value="" disabled selected hidden></option>
+              <option value="masculino">Masculino</option>
+              <option value="feminino">Feminino</option>
+              <option value="outro">Outro</option>
+              </select>
             <label for="genero">Gênero</label>
-            <input type="text" id="genero" name="genero">
           </div>
         </div>
         <div class="cpf-section">
           <div class="form-group">
+            <input type="text" placeholder=" " id="cpf" name="cpf">
             <label for="cpf">CPF</label>
-            <input type="text" id="cpf" name="cpf">
           </div>
           <div class="cpf-checkbox">
             <input type="checkbox" id="estrangeiro" name="estrangeiro">
@@ -72,6 +78,8 @@
       <button type="submit" class="submit-btn">Enviar Cadastro</button>
     </form>
   </div>
+  </div>
+  
   <br><br>
 </body>
 </html>

@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 body{
@@ -13,22 +12,34 @@ body{
 }
 .flex{
     display: flex;
+    justify-content: space-around;
+}
+#texto-alinhados{
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+#filha01{
+    width: 90%; /* Alterado de 400px fixos para 90% da largura */
+    max-width: 900px; /* Largura máxima */
+    margin: 2% auto; /* Centraliza horizontalmente e dá 5% de margem no topo */
+    height: 65px;
 }
 .container{
     width: 300px;
 }
 h1{
     color: floralwhite;
-    font-size: 2.2rem;
-    padding-left: 21%;
+    font-size: 2.5rem;
     padding-bottom: 10px;
+    margin-left: 20px;
 }
 .box{
     background-color: #ffffff;
     border-radius: 20px;
     padding: 40px 30px;
     width: 90%; /* Alterado de 400px fixos para 90% da largura */
-    max-width: 800px; /* Largura máxima */
+    max-width: 900px; /* Largura máxima */
     box-sizing: border-box;
     box-shadow: 0 0 20px 0 rgba(44, 0, 128, 0.15);
     margin: 2% auto; /* Centraliza horizontalmente e dá 5% de margem no topo */
@@ -199,12 +210,14 @@ input[type="password"] {
       left: 12px;
       top: 12px;
       background: white;
-      padding: 0 4px;
+      padding: 0 2px;
       color: #888;
       transition: 0.2s;
       pointer-events: none;
 }
-
+#abordagem + label, #descricao + label{
+    transform: translateX(20%);
+}
 input[type="text"]:focus + label,
 input[type="text"]:not(:placeholder-shown) + label,
 input[type="email"]:focus + label,
@@ -240,7 +253,6 @@ select {
   transition: 0.2s;
   pointer-events: none;
 }
-
 /* Quando o select tem valor (não é o option vazio) */
 select:focus + label,
 select:not([value=""]) + label {
@@ -281,7 +293,97 @@ form butoon [type="submit"]{
     font-family: 'Inter', Arial, sans-serif;
 }
 
+/* Estelização do checkbox como botões no campo sua especialiadade */
+    .checkbox-group {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+    }
 
+    .checkbox-group input[type="checkbox"] {
+      display: none;
+    }
+
+    .checkbox-group label {
+      display: inline-block;
+      padding: 12px;
+      width: 90px;
+      text-align: center;
+      border-radius: 12px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    /* Estilos individuais por cor */
+    #psicologo + label {
+      background-color: #f0f5ff;
+      color: #000;
+    }
+
+    #psicanalista + label {
+      background-color: #fff3dd;
+      color: #000;
+    }
+
+    #terapeuta + label {
+      background-color: #f4f0ff;
+      color: #000;
+    }
+
+    /* Quando selecionado */
+    .checkbox-group input[type="checkbox"]:checked + label {
+      border: 1px solid #a084e8;
+      box-shadow: 0 0 0 2px rgba(160, 132, 232, 0.4);
+    }
+
+/* Check box termos */
+.form-footer {
+  margin-top: 32px;
+  font-family: 'Inter', Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+.form-footer label {
+  font-size: 1rem;
+  color: #222;
+}
+.form-footer input[type="checkbox"] {
+  accent-color: #222;
+  padding: 2px;
+  width: 20px;
+  height: 13px;
+}
+.form-footer a {
+  color: #a084e8;
+  text-decoration: none;
+  font-weight: 400;
+  margin-left: 2px;
+}
+.form-footer a:hover {
+  text-decoration: underline;
+}
+/* fim */
+
+/* botão estilo */
+.submit-btn {
+  display: block;
+  margin: 32px auto 0 auto;
+  background: #5f3dc4;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 36px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  box-shadow: 0 2px 8px rgba(44, 19, 84, 0.08);
+}
+.submit-btn:hover {
+  background-color: #7c5fe6;
+}
 @media (max-width: 450px){
     
     .container{

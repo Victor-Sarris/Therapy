@@ -6,7 +6,7 @@ body {
   margin: 10;
   min-height: 100vh;
   font-family: 'Inter', Arial, sans-serif;
-  background: radial-gradient(ellipse at top left, #2d1a5a 0%, #1a1440 100%);
+  background: linear-gradient(to bottom, #0f0623, #2b0f6b);
   color: #fff;
 }
 

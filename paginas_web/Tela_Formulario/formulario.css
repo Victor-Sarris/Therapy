@@ -137,7 +137,7 @@ input[type="password"]:not(:placeholder-shown) + label {
     font-size: 12px;
     color: #333;
 }
-/Fim label flutuantes/
+/* Fim label flutuantes */
 
 /* Label Flutuante para select */
 select {

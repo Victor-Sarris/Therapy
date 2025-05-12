@@ -65,8 +65,6 @@ body {
 .titulo_Principal  {
   margin-top: 60px;
   font-size: 2.2rem;
-  justify-content: center;
-  display:flex ;
   font-weight: 700;
   margin-left: 100px;
   color: #fff;

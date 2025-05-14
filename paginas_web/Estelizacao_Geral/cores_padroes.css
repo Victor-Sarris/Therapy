@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+  --background-roxo: linear-gradient(to bottom, #0f0623, #2b0f6b);
+  --branco-default: #fff;
+  --box-shadow-roxo: rgba(44, 0, 128, 0.15);
+  --btn-color-roxo:#5a23c8;
+  --btn-hover-roxo: #2b1e6b;
+  --link-login: #b36be2;
+  --link-login-hover: #5a23c8;
+  --link-home-list-hover: #b150a4;
+}

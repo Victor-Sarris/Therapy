@@ -1,88 +1,87 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Editar Perfil - Therapy</title>
-  <link rel="stylesheet" href="../01. Css - Telas de Cadasto - Login/tela_perfil_profissional.css" />
-  <link rel="shortcut icon" href="../01. and_icons_and_images/icons_tela_perfil_profissional/FiveIcon/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Psicólogo | Therapy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="..//01. Css - Telas de Cadasto - Login/tela_perfil_profissional.css">
 </head>
 <body>
-  <div class="container">
-    <aside class="sidebar">
-      <div class="logo">
-        <img src="../01. and_icons_and_images/icons_tela_perfil_profissional/logo_therapy.png" alt="Therapy" />
-        <h1 id="titulo-sidebar">Therapy</h1>
-      </div>
-      <div class="profile-mini">
-        <img src="../01. and_icons_and_images/icons_tela_perfil_profissional/profissional-img.jpg" alt="Perfil" />
-        <span>Psic. Felipe</span>
-        <small>Perfil do Profissional</small>
-      </div>
-      <nav>
-        <ul>
-          <li class="active">Dashboard</li>
-          <li>Meet</li>
-          <li>Gestão</li>
-          <li>Agenda</li>
-          <li>Listas de Pacientes</li>
-          <li>Outros Especialistas</li>
-          <li class="section-title">Outros</li>
-          <li>Mensagem</li>
-          <li>Ajustes</li>
-        </ul>
-        <a class="logout">Sair da Conta</a>
-      </nav>
-    </aside>
-
-    <main class="content">
-      <header class="topbar">
-        <h2>Edite seu Perfil do Profissional</h2>
-        <div class="actions">
-          <button class="btn">Alterar Dados</button>
-        </div>
-      </header>
-
-      <section class="profile-section">
-        <div class="profile-header">
-          <img src="../01. and_icons_and_images/icons_tela_perfil_profissional/profissional-img.jpg" alt="Foto" class="profile-pic" />
-          <div>
-            <h3>Felipe Sousa</h3>
-            <p>FelipeSousa@gmail.com</p>
-          </div>
-        </div>
-
-        <form class="profile-form">
-          <div class="form-group">
-            <h4>Sobre Você</h4>
-            <input type="text" placeholder="Nome" />
-            <label for="Nome">Nome</label>
-            <input type="email" placeholder="Email" />
-            <label for="email">Email</label>
-            <input type="password" placeholder="Senha" />
-            <label for="email">Email</label>
-            <div class="form-row">
-              <input type="text" placeholder="Telefone" />
-              <input type="text" placeholder="CPF" />
+    <div class="container">
+        <button class="mobile-menu-btn" id="menuToggle"><i class="fas fa-bars"></i></button>
+        <aside class="sidebar" id="sidebar">
+            <div class="logo"><img src="..//01. and_icons_and_images/therapy_icon/logo_therapy.png"logo"> Therapy</div>
+            <div class="profile-mini">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto do Psicólogo">
+                <div class="name">Felipe Sousa</div>
             </div>
-            <input type="text" placeholder="Gênero" />
-            <button type="button" class="add-email">+ Add Outro Email</button>
-          </div>
-
-          <div class="form-group">
-            <h4>Sua Especialidade</h4>
-            <input type="text" placeholder="Abordagem" />
-            <input type="text" placeholder="Descrição" />
-            <input type="text" placeholder="Bio" />
-            <input type="text" placeholder="Temática" />
-            <div class="upload-box">
-              <p>Arraste e solte o arquivo de imagem aqui</p>
-              <button type="button">Escolher arquivo</button>
+            <nav>  <!-- obs.:sidebar-->
+                <ul>
+                    <li><a href="#" class="active"><i class="fa-solid fa-gauge icon"></i><span class="text">Dashboard</span><span class="tooltip">Dashboard</span></a></li>
+                    <li><a href="#"><i class="fa-solid fa-video icon"></i><span class="text">Meet</span><span class="tooltip">Meet</span></a></li>
+                    <li><a href="#"><i class="fa-solid fa-briefcase icon"></i><span class="text">Gestão</span><span class="tooltip">Gestão</span></a></li>
+                    <li><a href="#"><i class="fa-solid fa-calendar-days icon"></i><span class="text">Agenda</span><span class="tooltip">Agenda</span></a></li>
+                    <li><a href="#"><i class="fa-solid fa-users icon"></i><span class="text">Lista de Pacientes</span><span class="tooltip">Lista de Pacientes</span></a></li>
+                    <li><a href="#"><i class="fa-solid fa-user-doctor icon"></i><span class="text">Outros Especialistas</span><span class="tooltip">Outros Especialistas</span></a></li>
+                    <li><a href="#"><i class="fa-solid fa-comments icon"></i><span class="text">Mensagens</span><span class="tooltip">Mensagens</span></a></li>
+                    <li><a href="#"><i class="fa-solid fa-gear icon"></i><span class="text">Ajustes</span><span class="tooltip">Ajustes</span></a></li>
+                </ul>
+            </nav>
+            <div class="logout">
+                <a href="#"><i class="fa-solid fa-arrow-right-from-bracket icon"></i><span class="text">Sair da Conta</span><span class="tooltip">Sair da Conta</span></a>
             </div>
-          </div>
-        </form>
-      </section>
-    </main>
-  </div>
+        </aside>
+        <main class="main">
+            <div class="profile-header">
+                <div class="profile-photo">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto do Psicólogo">
+                    <button class="edit-btn" title="Editar Foto"><i class="fa-solid fa-pen"></i></button>
+                </div>
+                <div class="profile-info">
+                    <h2>Psicólogo Felipe Sousa</h2>
+                    <div class="crp">CRP 123456</div>
+                    <div class="city">Florianópolis, SC</div>
+                    <button class="edit-profile-btn">Editar seu Perfil</button>
+                    <div class="greeting">Olá! Que bom que você chegou aqui!</div>
+                    <div class="themes">
+                        <button class="theme-btn active">Ansiedade</button>
+                        <button class="theme-btn">TOC</button>
+                        <button class="theme-btn">TDAH</button>
+                        <button class="theme-btn">Relacionamentos</button>
+                        <button class="theme-btn">Conflitos Familiares</button>
+                    </div>
+                </div>
+            </div>
+            <div class="info-sections">
+                <section class="info-block">
+                    <h3>Abordagem Terapêutica</h3>
+                    <p><b>Terapia Cognitivo Comportamental (TCC), Psicologia da Saúde e Psicologia Clínica</b><br>
+                    • Psicólogo Clínico formado pela Universidade Federal do Sul da Bahia.<br>
+                    • Especialista em Terapia Cognitivo-Comportamental e Psicologia da Saúde.<br>
+                    • Estou aqui para te acolher, de forma ética e humana, para que possa falar sobre suas dores sem medo de ser julgado(a).</p>
+                </section>
+                <section class="info-block">
+                    <h3>Biografia de Informações</h3>
+                    <p>Através da experiência pessoal e profissional afirmo que é possível transformar-se através do autoconhecimento. Permita-se encontrar uma nova maneira de sentir e viver a vida através da psicanálise e mudança de hábitos.<br>
+                    Eu posso ajudar você nesse caminho! Vamos?</p>
+                </section>
+                <section class="info-block">
+                    <h3>Me encontre também</h3>
+                    <ul class="social">
+                        <li><a href="#" title="Facebook"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href="#" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+                    </ul>
+                </section>
+                <section class="info-block">
+                    <h3>Objetivos de tratamento</h3>
+                    <p>Meu compromisso é oferecer um acompanhamento personalizado e eficaz, ajudando você a alcançar uma vida mais equilibrada e saudável. Através da Terapia Cognitivo-Comportamental (TCC) e de uma abordagem humanizada, busco auxiliar no gerenciamento de desafios emocionais, promovendo autoconhecimento, resiliência e bem-estar.</p>
+                </section>
+            </div>
+        </main>
+    </div>
+    <script src="profile.js"></script>
 </body>
 </html>

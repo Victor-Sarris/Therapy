@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Editar Perfil - Therapy</title>
+  <link rel="stylesheet" href="../01. Css - Telas de Cadasto - Login/tela_perfil_profissional_edicao.css" />
+  <link rel="shortcut icon" href="../01. and_icons_and_images/icons_tela_perfil_profissional/FiveIcon/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="../01. and_icons_and_images/icons_tela_perfil_profissional/logo_therapy.png" alt="Therapy" />
+        <h1 id="titulo-sidebar">Therapy</h1>
+      </div>
+      <div class="profile-mini">
+        <img src="../01. and_icons_and_images/icons_tela_perfil_profissional/profissional-img.jpg" alt="Perfil" />
+        <span>Psic. Felipe</span>
+        <small>Perfil do Profissional</small>
+      </div>
+      <nav>
+        <ul>
+          <li class="active">Dashboard</li>
+          <li>Meet</li>
+          <li>Gestão</li>
+          <li>Agenda</li>
+          <li>Listas de Pacientes</li>
+          <li>Outros Especialistas</li>
+          <li class="section-title">Outros</li>
+          <li>Mensagem</li>
+          <li>Ajustes</li>
+        </ul>
+        <a class="logout">Sair da Conta</a>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <header class="topbar">
+        <h2>Edite seu Perfil do Profissional</h2>
+        <div class="actions">
+          <button class="btn">Alterar Dados</button>
+        </div>
+      </header>
+
+      <section class="profile-section">
+        <div class="profile-header">
+          <img src="../01. and_icons_and_images/icons_tela_perfil_profissional/profissional-img.jpg" alt="Foto" class="profile-pic" />
+          <div>
+            <h3>Felipe Sousa</h3>
+            <p>FelipeSousa@gmail.com</p>
+          </div>
+        </div>
+
+        <form class="profile-form">
+          <div class="form-group">
+            <h4>Sobre Você</h4>
+            <input type="text" placeholder="Nome" />
+            <label for="Nome">Nome</label>
+            <input type="email" placeholder="Email" />
+            <label for="email">Email</label>
+            <input type="password" placeholder="Senha" />
+            <label for="email">Email</label>
+            <div class="form-row">
+              <input type="text" placeholder="Telefone" />
+              <input type="text" placeholder="CPF" />
+            </div>
+            <input type="text" placeholder="Gênero" />
+            <button type="button" class="add-email">+ Add Outro Email</button>
+          </div>
+
+          <div class="form-group">
+            <h4>Sua Especialidade</h4>
+            <input type="text" placeholder="Abordagem" />
+            <input type="text" placeholder="Descrição" />
+            <input type="text" placeholder="Bio" />
+            <input type="text" placeholder="Temática" />
+            <div class="upload-box">
+              <p>Arraste e solte o arquivo de imagem aqui</p>
+              <button type="button">Escolher arquivo</button>
+            </div>
+          </div>
+        </form>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

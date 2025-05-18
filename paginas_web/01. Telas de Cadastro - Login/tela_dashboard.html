@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Terapia</title>
+  <link rel="stylesheet" href="../01. Css - Telas de Cadasto - Login/tela_dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <script src="https://kit.fontawesome.com/a2d9a56b2b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="../01. and_icons_and_images/therapy_icon/logo_therapy.png" alt="logo">
+        Therapy
+      </div>
+      <div class="profile-mini">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto do Psicólogo">
+        <div class="name">Felipe Sousa</div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#" class="active"><i class="fa-solid fa-gauge icon"></i><span class="text">Dashboard</span><span class="tooltip">Dashboard</span></a></li>
+          <li><a href="#"><i class="fa-solid fa-video icon"></i><span class="text">Meet</span><span class="tooltip">Meet</span></a></li>
+          <li><a href="#"><i class="fa-solid fa-briefcase icon"></i><span class="text">Gestão</span><span class="tooltip">Gestão</span></a></li>
+          <li><a href="#"><i class="fa-solid fa-calendar-days icon"></i><span class="text">Agenda</span><span class="tooltip">Agenda</span></a></li>
+          <li><a href="#"><i class="fa-solid fa-users icon"></i><span class="text">Lista de Pacientes</span><span class="tooltip">Lista de Pacientes</span></a></li>
+          <li><a href="#"><i class="fa-solid fa-user-doctor icon"></i><span class="text">Outros Especialistas</span><span class="tooltip">Outros Especialistas</span></a></li>
+          <li><a href="#"><i class="fa-solid fa-comments icon"></i><span class="text">Mensagens</span><span class="tooltip">Mensagens</span></a></li>
+          <li><a href="#"><i class="fa-solid fa-gear icon"></i><span class="text">Ajustes</span><span class="tooltip">Ajustes</span></a></li>
+        </ul>
+      </nav>
+      <div class="logout">
+        <a href="#"><i class="fa-solid fa-arrow-right-from-bracket icon"></i><span class="text">Sair da Conta</span><span class="tooltip">Sair da Conta</span></a>
+      </div>
+    </aside>
+
+    <!-- Conteúdo principal -->
+    <div class="main-content">
+      <!-- Cabeçalho -->
+      <header>
+        <div class="welcome">
+          <h1>Bem-Vindo</h1>
+          <h2>A sua área de trabalho <span style="color:#6c5ce7">Psic. Felipe</span></h2>
+          <p>Gerencie suas tarefas, suas consultas e outras opções dentro do Therapy</p>
+        </div>
+        <div class="header-image">
+          <img src="img/dashboard-illustration.png" alt="Ilustração Dashboard">
+        </div>
+      </header>
+
+      <!-- Grid principal -->
+      <div class="main-grid">
+        <!-- Progresso -->
+        <div class="progress-section">
+          <h3>Atividade de Progresso</h3>
+          <div class="donut-chart">
+            <div class="chart-center">
+              <span>70%</span>
+            </div>
+          </div>
+          <div class="chart-legend">
+            <div class="legend-item">
+              <span class="dot purple"></span>
+              <span>Pacientes Regulares 25%</span>
+            </div>
+            <div class="legend-item">
+              <span class="dot blue"></span>
+              <span>Pacientes Plantão 45%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ações rápidas -->
+        <div class="actions-section">
+          <div class="action-card">
+            <img src="img/notes-icon.png" alt="Anotações">
+            <div>
+              <h4>Anotações</h4>
+              <p>Anote e visualize</p>
+            </div>
+          </div>
+          <div class="action-card">
+            <img src="img/files-icon.png" alt="Arquivos">
+            <div>
+              <h4>Arquivos</h4>
+              <p>Guarde seus arquivos</p>
+            </div>
+          </div>
+          <div class="action-card">
+            <img src="img/cancel-icon.png" alt="Cancelados">
+            <div>
+              <h4>Cancelados</h4>
+              <p>Pacientes que cancelaram</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Calendário -->
+        <div class="calendar-section">
+          <h3>Calendário</h3>
+          <div class="calendar-placeholder">[Calendário aqui]</div>
+        </div>
+
+        <!-- Lista de Pacientes -->
+        <div class="patients-list">
+          <h3>Lista de Pacientes</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Usuário</th>
+                <th>Nome</th>
+                <th>Gênero</th>
+                <th>Opções</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>user123</td>
+                <td>Ana Paula</td>
+                <td>Feminino</td>
+                <td>📝 📁 ❌</td>
+                <td><span class="status active">Ativo</span></td>
+              </tr>
+              <tr>
+                <td>user456</td>
+                <td>João Silva</td>
+                <td>Masculino</td>
+                <td>📝 📁 ❌</td>
+                <td><span class="status inactive">Inativo</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

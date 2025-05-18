@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root{
-  --background-roxo: linear-gradient(to bottom, #0f0623, #2b0f6b);
+  --background-roxo: linear-gradient( bottom, #0f0623, #2b0f6b);
   --branco-default: #fff;
   --box-shadow-roxo: rgba(44, 0, 128, 0.15);
   --btn-color-roxo:#5a23c8;

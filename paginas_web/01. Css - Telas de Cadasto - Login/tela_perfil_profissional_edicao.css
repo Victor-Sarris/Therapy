@@ -412,5 +412,3 @@ input[type="password"]:not(:placeholder-shown) + label {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   height: fit-content;
 }
-
-/* Mantenha todos os outros estilos anteriores */

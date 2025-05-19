@@ -6,51 +6,41 @@
   <title>Therapy - Dashboard</title>
   
   <!-- Links externos -->
+  <link rel="shortcut icon" href="../01. and_icons_and_images/icons_tela_perfil_profissional/FiveIcon/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="../01. and_icons_and_images/therapy_icon/FiveIcon/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="../01. Css - Telas de Cadasto - Login/tela_lista_paciente.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
   <div class="container">
     <!-- ========== SIDEBAR ========== -->
-    <aside class="sidebar">
-      <div class="logo">
-        <img src="../01. and_icons_and_images/therapy_icon/logo_therapy.png" alt="Logo Therapy">
-        <span>Therapy</span>
-      </div>
-      
-      <div class="profile-card">
-        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Psic. Felipe">
-        <div>
-          <strong>Psic. Felipe</strong>
-          <span>Perfil do Profissional</span>
-        </div>
-      </div>
-      
-      <nav class="menu">
-        <!-- Menu principal -->
-        <ul>
-          <li><i class="bi bi-grid"></i> Dashboard</li>
-          <li><i class="bi bi-camera-video"></i> Sessão</li>
-          <li><i class="bi bi-briefcase"></i> Gestão</li>
-          <li><i class="bi bi-calendar-event"></i> Agenda</li>
-          <li class="active" ><i class="bi bi-people"></i> Listas de Pacientes</li>
-          <li><i class="bi bi-person-badge"></i> Outros Especialistas</li>
-        </ul>
-        
-        <!-- Menu secundário -->
-        <span class="menu-section">Outros</span>
-        <ul>
-          <li><i class="bi bi-chat-dots"></i> Mensagem</li>
-          <li><i class="bi bi-gear"></i> Ajustes</li>
-        </ul>
-        
-        <!-- Logout -->
-        <div class="logout">
-          <i class="bi bi-box-arrow-right"></i> Sair da Conta
-        </div>
-      </nav>
-    </aside>
+    <div class="container">
+      <aside class="sidebar" id="sidebar">
+          <div class="logo"><img src="..//01. and_icons_and_images/therapy_icon/logo_therapy.png" alter="logo"> Therapy</div>
+            <div class="profile-mini">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto do Psicólogo">
+                <div class="name">Felipe Sousa</div>
+            </div>
+            <nav>  <!-- obs.:sidebar-->
+                <ul>
+                    <li><a href="tela_dashboard.html" "><i class="fa-solid fa-gauge icon"></i><span class="text">Dashboard</span><span class="tooltip">Dashboard</span></a></li>
+                    <li><a href="#"><i class="fa-solid fa-video icon"></i><span class="text">Meet</span><span class="tooltip">Meet</span></a></li>
+                    <li><a href="#"><i class="fa-solid fa-briefcase icon"></i><span class="text">Gestão</span><span class="tooltip">Gestão</span></a></li>
+                    <li><a href="#"><i class="fa-solid fa-calendar-days icon"></i><span class="text">Agenda</span><span class="tooltip">Agenda</span></a></li>
+                    <li><a href="#" class="active"><i class="fa-solid fa-users icon"></i><span class="text">Lista de Pacientes</span><span class="tooltip">Lista de Pacientes</span></a></li>
+                    <li><a href="#"><i class="fa-solid fa-user-doctor icon"></i><span class="text">Outros Especialistas</span><span class="tooltip">Outros Especialistas</span></a></li>
+                    <li><a href="#"><i class="fa-solid fa-comments icon"></i><span class="text">Mensagens</span><span class="tooltip">Mensagens</span></a></li>
+                    <li><a href="#"><i class="fa-solid fa-gear icon"></i><span class="text">Ajustes</span><span class="tooltip">Ajustes</span></a></li>
+                </ul>
+            </nav>
+            <div class="logout">
+                <a href="#"><i class="fa-solid fa-arrow-right-from-bracket icon"></i><span class="text">Sair da Conta</span><span class="tooltip">Sair da Conta</span></a>
+            </div>
+      </aside>
+    </div>
+    
 
     <!-- ========== MAIN CONTENT ========== -->
     <main class="main-content">

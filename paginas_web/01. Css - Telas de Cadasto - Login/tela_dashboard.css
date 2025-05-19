@@ -1,13 +1,19 @@
 :root {
-  --primary-color: #6c5ce7;
-  --secondary-color: #579AFF;
-  --background-color: #f5f6fa;
-  --text-color: #2d3436;
-  --success-color: #00b894;
-  --danger-color: #ff7675;
-  --white: #fff;
-  --gray-dark: #555;
-  --primary-light: #dfe6ff;
+    --primary: #7c3aed;
+    --primary-light: #ede9fe;
+    --gray: #f3f4f6;
+    --gray-dark: #6b7280;
+    --white: #fff;
+    --shadow: 0 4px 24px rgba(60, 60, 120, 0logo08);
+     --branco-default: #fff;
+  --box-shadow-roxo: rgba(44, 0, 128, 0.15);
+  --btn-color-roxo:#5a23c8;
+  --btn-hover-roxo: #2b1e6b;
+  --link-login: #b36be2;
+  --link-login-hover: #5a23c8;
+  --link-home-list-hover: #b150a4;
+  --primary-color: #5a23c8;
+  --second-color: #1e98b6;
 }
 
 * {
@@ -18,7 +24,7 @@
 }
 
 body {
-  background-color: var(--background-color);
+  background-color: var(--gray);
 }
 
 .app-container {
@@ -35,6 +41,7 @@ body {
   padding: 32px 0 16px 0;
   position: relative;
   z-index: 2;
+  color: var(--primary);
 }
 
 .sidebar .logo {
@@ -129,7 +136,7 @@ header {
   font-size: 14px;
 }
 .header-image img {
-  max-width: 250px;
+  max-width: 150px;
 }
 
 .main-grid {
@@ -188,7 +195,7 @@ header {
   margin-right: 8px;
 }
 .dot.purple { background-color: var(--primary-color); }
-.dot.blue { background-color: var(--secondary-color); }
+.dot.blue { background-color: var(--second-color); }
 
 .actions-section {
   display: flex;
@@ -239,11 +246,11 @@ th, td {
 }
 .status.active {
   background-color: var(--success-color);
-  color: white;
+  color: rgb(64, 219, 77);
 }
 .status.inactive {
   background-color: var(--danger-color);
-  color: white;
+  color: rgb(235, 58, 58);
 }
 
 /* Responsivo */

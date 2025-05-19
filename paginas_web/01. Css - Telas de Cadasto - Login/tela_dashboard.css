@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap'); /* fonte "urbanist" */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); /* fonte poppins*/
+
 :root {
     --primary: #7c3aed;
     --primary-light: #ede9fe;
@@ -20,7 +24,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: Arial, Helvetica, sans-serif
 }
 
 body {
@@ -32,81 +36,117 @@ body {
   height: 100vh;
 }
 
+/* Sidebar */
 .sidebar {
-  background: var(--white);
-  width: 260px;
-  box-shadow: 2px 0 5px rgba(0,0,0,0.05);
-  display: flex;
-  flex-direction: column;
-  padding: 32px 0 16px 0;
-  position: relative;
-  z-index: 2;
-  color: var(--primary);
+    background: var(--white);
+    width: 260px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    padding: 32px 0 16px 0;
+    position: relative;
+    z-index: 2;
+    transition: width 0.3s;
 }
-
 .sidebar .logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: bold;
-  font-size: 1.3rem;
-  color: var(--primary-color);
-  margin-left: 32px;
-  margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: var(--primary);
+    margin-left: 32px;
+    margin-bottom: 32px;
 }
+
+.logo{
+  font-family: "Urbanist", sans-serif;
+}
+
 .logo img {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid var(--primary-light);
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--primary-light);
 }
-
-.profile-mini {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin: 0 0 32px 32px;
+.sidebar .profile-mini {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 0 32px 32px;
 }
-.profile-mini img {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid var(--primary-light);
+.sidebar .profile-mini img {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--primary-light);
 }
-.profile-mini .name {
-  font-size: 1rem;
-  font-weight: 500;
+.sidebar .profile-mini .name {
+    font-size: 1rem;
+    font-weight: 500;
 }
-
-.sidebar nav ul {
-  list-style: none;
-  padding: 0 0 0 16px;
+.sidebar nav {
+    flex: 1;
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0 0 0 16px;
 }
 .sidebar li {
-  margin-bottom: 18px;
+    margin-bottom: 18px;
 }
 .sidebar a {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  text-decoration: none;
-  color: var(--gray-dark);
-  font-size: 1.08rem;
-  padding: 10px 18px;
-  border-radius: 8px 0 0 8px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+    color: var(--gray-dark);
+    font-size: 1.08rem;
+    padding: 10px 18px;
+    border-radius: 8px 0 0 8px;
+    position: relative;
+    transition: background 0.2s, color 0.2s;
 }
 .sidebar a.active, .sidebar a:hover {
-  background: var(--primary-light);
-  color: var(--primary-color);
+    background: var(--primary-light);
+    color: var(--primary);
 }
+.sidebar a .icon {
+    font-size: 1.2rem;
+    position: relative;
+}
+/* Tooltip */
 .sidebar a .tooltip {
-  display: none;
+    visibility: hidden;
+    opacity: 0;
+    background: var(--primary);
+    color: var(--white);
+    border-radius: 6px;
+    padding: 4px 10px;
+    position: absolute;
+    left: 110%;
+    top: 50%;
+    transform: translateY(-50%) scale(0.95);
+    white-space: nowrap;
+    font-size: 0.95rem;
+    pointer-events: none;
+    transition: opacity 0.25s, transform 0.25s;
+    z-index: 10;
 }
-.logout {
-  margin-top: 32px;
-  margin-left: 16px;
+.sidebar a:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+}
+.sidebar .logout {
+    margin-top: 32px;
+    margin-left: 16px;
+}
+
+main{
+  font-family: "Poppins", sans-serif;
 }
 
 .main-content {
@@ -152,6 +192,10 @@ header {
   padding: 20px;
   border-radius: 15px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.calendar-section h3{
+  text-align: center;
 }
 
 .donut-chart {
@@ -215,6 +259,44 @@ header {
   height: 40px;
   margin-right: 15px;
 }
+
+.calendar-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  padding: 10px;
+}
+
+.calendar-header {
+  font-weight: bold;
+  font-size: 18px;
+  color: var(--primary-color);
+}
+
+.calendar-weekdays,
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+.calendar-weekdays div {
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.calendar-days div,
+.calendar-weekdays div {
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 8px 0;
+}
+
+.calendar-days div.empty {
+  background-color: transparent;
+}
+
 
 .calendar-placeholder {
   background: #f1f1f1;

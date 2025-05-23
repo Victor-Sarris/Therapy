@@ -60,7 +60,7 @@
       </section>
       <section class="documents">
         <div class="documents-header">
-          <button class="btn-primary">Crie um novo Documento</button>
+          <button class="btn-primary" id="abrirModal">Crie um novo Documento</button>
           <select>
             <option>Todos</option>
           </select>
@@ -154,6 +154,36 @@
         </table>
       </section>
     </main>
+  </div>
+
+  <!-- Estrutura do Modal -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="fechar">&times;</span>
+    <h2>Preencha o Documento</h2>
+    
+    <form>
+      <label>Conteúdo</label>
+      <select>
+        <option>Selecione</option>
+        <option>Atestado</option>
+        <option>Laudo</option>
+      </select>
+
+      <label>Título do Documento</label>
+      <input type="text" placeholder="Digite aqui">
+
+      <label>Tipo do Arquivo</label>
+      <select>
+        <option>Selecione</option>
+        <option>Personalizado</option>
+      </select>
+
+      <label>Editor de Texto</label>
+      <textarea rows="5">Texto do documento...</textarea>
+
+      <button type="submit">Criar Arquivo</button>
+    </form>
   </div>
 </body>
 </html>

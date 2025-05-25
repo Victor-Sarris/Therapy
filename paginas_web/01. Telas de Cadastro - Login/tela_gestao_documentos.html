@@ -164,26 +164,32 @@
     
     <form>
       <label>Conteúdo</label>
-      <select>
+      <select id="select_option">
         <option>Selecione</option>
         <option>Atestado</option>
         <option>Laudo</option>
+        <option>Relatório</option>
+        <option>Ficha</option>
       </select>
 
       <label>Título do Documento</label>
-      <input type="text" placeholder="Digite aqui">
+      <input type="text" placeholder="Digite aqui" id="titulo_documento">
 
       <label>Tipo do Arquivo</label>
-      <select>
+      <select id="select_option">
         <option>Selecione</option>
         <option>Personalizado</option>
+        <option>Documento oficial</option>
+        <option>Documento padrão</option>
       </select>
 
       <label>Editor de Texto</label>
-      <textarea rows="5">Texto do documento...</textarea>
+      <textarea rows="5" placeholder="Texto do documento"></textarea>
 
       <button type="submit">Criar Arquivo</button>
     </form>
   </div>
+
+  <script src="../01. JS - Telas de cadastro/tela_gestao_documentos.js"></script>
 </body>
 </html>

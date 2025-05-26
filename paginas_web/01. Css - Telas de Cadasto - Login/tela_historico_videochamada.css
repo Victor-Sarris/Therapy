@@ -157,9 +157,10 @@ main {
 .header-icons i {
   font-size: 1.3em;
   margin-left: 16px;
-  color: #7c3aed;
   padding-left: 2px;
+  color: #7c3aed;
   cursor: pointer;
+
 }
 
 .main-content{

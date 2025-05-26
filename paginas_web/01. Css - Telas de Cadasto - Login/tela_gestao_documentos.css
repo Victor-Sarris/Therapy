@@ -313,17 +313,18 @@ td i:hover {
     padding: 10px;
   }
 
-  & label{
-
-  }
-
   & #select_option {
     width: 100%;
     padding: 1rem;
+    border: 1px solid #5a23c8;
+    border-radius: 5px;
   }
 
   & #titulo_documento {
     padding: 1rem;
+    border: 1px solid #5a23c8;
+    outline: none;
+    border-radius: 5px;
   }
 
   /* Conteúdo do Modal */
@@ -350,6 +351,21 @@ td i:hover {
     margin-left: 5rem;
     margin-right: 5rem;
     margin-top: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+    border: none;
+  }
+
+  & #button_criar:hover {
+  background: #5b21b6;
+  }
+
+  & textarea{
+    border: 1px solid #5a23c8;
+    outline: none;
+    border-radius: 5px;
+    padding: 1rem;
   }
 }
 

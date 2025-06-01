@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Prontuários - Therapy</title>
+  <link rel="stylesheet" href="../01. Css - Telas de Cadasto - Login/tela_prontuarios_vistaProfissional.css">
+  <link rel="shortcut icon" href="../01. and_icons_and_images/therapy_icon/FiveIcon/favicon.ico" type="image/x-icon">n
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="../01. and_icons_and_images/therapy_icon/logo_therapy.png" alt="logo">
+        Therapy
+      </div>
+      <div class="profile-mini">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto do Psicólogo">
+        <div class="name"><a href="tela_perfil_profissional.html">Felipe Sousa</a></div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="tela_dashboard.html"><i class="fa-solid fa-gauge icon"></i><span class="text">Dashboard</span><span class="tooltip">Dashboard</span></a></li>
+          <li><a href="#"><i class="fa-solid fa-video icon"></i><span class="text">Meet</span><span class="tooltip">Meet</span></a></li>
+          <li><a href="#" class="active"><i class="fa-solid fa-briefcase icon"></i><span class="text">Gestão</span><span class="tooltip">Gestão</span></a></li>
+           <li><a href="tela_historico_consultas.html"><i class="fa-solid fa-table-list"></i><span class="text">Histórico de Consultas</span><span class="tooltip">Histórico de Consultas</span></a></li>
+           <li><a href="tela_historico_videochamadas.html"><i class="fa-solid fa-film"></i><span class="text">Histórico de Videochamadas</span><span class="tooltip">Histórico de Videochamadas</span></a></li>
+          <li><a href="#"><i class="fa-solid fa-calendar-days icon"></i><span class="text">Agenda</span><span class="tooltip">Agenda</span></a></li>
+          <li><a href="tela_lista_paciente.html"><i class="fa-solid fa-users icon"></i><span class="text">Lista de Pacientes</span><span class="tooltip">Lista de Pacientes</span></a></li>
+          <li><a href="#"><i class="fa-solid fa-user-doctor icon"></i><span class="text">Outros Especialistas</span><span class="tooltip">Outros Especialistas</span></a></li>
+          <li><a href="#"><i class="fa-solid fa-comments icon"></i><span class="text">Mensagens</span><span class="tooltip">Mensagens</span></a></li>
+          <li><a href="#"><i class="fa-solid fa-gear icon"></i><span class="text">Ajustes</span><span class="tooltip">Ajustes</span></a></li>
+        </ul>
+      </nav>
+      <div class="logout">
+        <a href="#"><i class="fa-solid fa-arrow-right-from-bracket icon"></i><span class="text">Sair da Conta</span><span class="tooltip">Sair da Conta</span></a>
+      </div>
+    </aside>
+     <main class="main-content">
+    <h1>Prontuários</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Cliente</th>
+          <th>Data da Meet</th>
+          <th>Status</th>
+          <th>Meet's</th>
+          <th>Descrição</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Paulo</td>
+          <td>20/02/2025</td>
+          <td><span class="statusPago">Pago</span></td>
+          <td>15:00</td>
+          <td>Anotações da sessão</td>
+          <td>
+                <i class="fa fa-eye"></i>
+                <i class="fa fa-download"></i>
+                <i class="fa fa-edit"></i>
+          </td>
+        </tr>
+        <tr>
+          <td>Pedro</td>
+          <td>23/02/2025</td>
+          <td><span class="statusPendente">Pendente</span></td>
+          <td>19:00</td>
+          <td>Adicionar anotações de sessão</td>
+          <td>
+                <i class="fa fa-eye"></i>
+                <i class="fa fa-download"></i>
+                <i class="fa fa-edit"></i>
+          </td>
+        </tr>
+        <tr>
+            <td>Sarris</td>
+            <td>12/07/2024</td>
+            <td><span class="statusNaoPago">Não Pago</span></td>
+            <td>20:30</td>
+            <td>Adicionar anotações de sessão</td>
+            <td>
+                <i class="fa fa-eye"></i>
+                <i class="fa fa-download"></i>
+                <i class="fa fa-edit"></i>
+          </td>
+        </tr>
+        <tr>
+            <td>Bruno</td>
+            <td>11/04/2025</td>
+            <td><span class="statusPago">Pago</span></td>
+            <td>17:10</td>
+            <td>Adicionar anotações de sessão</td>
+            <td>
+                <i class="fa fa-eye"></i>
+                <i class="fa fa-download"></i>
+                <i class="fa fa-edit"></i>
+        </tr>
+        <tr>
+            <td>Ana</td>
+            <td>15/01/2025</td>
+            <td><span class="statusNaoPago">Não Pago</span></td>
+            <td>14:40</td>
+            <td>Anotações de sessão</td>
+            <td>
+                <i class="fa fa-eye"></i>
+                <i class="fa fa-download"></i>
+                <i class="fa fa-edit"></i>
+        </tr>
+        <tr>
+            <td>José</td>
+            <td>30/08/2024</td>
+            <td><span class="statusPago">Pago</span></td>
+            <td>0920:</td>
+            <td>Anotações de sessão</td>
+            <td>
+                <i class="fa fa-eye"></i>
+                <i class="fa fa-download"></i>
+                <i class="fa fa-edit"></i>
+        </tr>
+        <tr>
+            <td>Paula</td>
+            <td>25/09/2025</td>
+            <td><span class="statusPago">Pago</span></td>
+            <td>19:35</td>
+            <td>Adicionar anotações de sessão</td>
+            <td>
+                <i class="fa fa-eye"></i>
+                <i class="fa fa-download"></i>
+                <i class="fa fa-edit"></i>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <script src="../01. JS - Telas de cadastro/tela_prontuario_vistaProfissional.js"></script>
+</body>
+</html>

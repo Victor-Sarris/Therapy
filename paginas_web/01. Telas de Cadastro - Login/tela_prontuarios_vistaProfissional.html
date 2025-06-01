@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Prontuários - Therapy</title>
   <link rel="stylesheet" href="../01. Css - Telas de Cadasto - Login/tela_prontuarios_vistaProfissional.css">
-  <link rel="shortcut icon" href="../01. and_icons_and_images/therapy_icon/FiveIcon/favicon.ico" type="image/x-icon">n
+  <link rel="shortcut icon" href="../01. and_icons_and_images/therapy_icon/FiveIcon/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
@@ -37,7 +37,49 @@
       </div>
     </aside>
      <main class="main-content">
+        <header>
+        <div class="search">
+          <input type="text" placeholder="Pesquisar...">
+          <i class="fa fa-search"></i>
+        </div>
+        <div class="header-icons">
+          <i class="fa fa-bell"></i>
+          <i class="fa fa-cog"></i>
+        </div>
+      </header>
+      <section class="welcome">
+        <div>
+          <h2>Bem-Vindo</h2>
+          <h1>Ao seus Prontuários Psic. Felipe</h1>
+          <p>Gerencie suas tarefas, suas consultas e outras opções dentro do Therapy.</p>
+        </div>
+        <div class="header-image">
+            <img src="../01. and_icons_and_images/icons_tela_gestao_documentos/mulher-apontando-para-calendario.png" alt="Ilustração">
+        </div>
+      </section>
     <h1>Prontuários</h1>
+    <section class="documents-sections">
+        <div class="campo1">
+            <h2>Tipo de documento</h2>
+            <select>
+                <option>Todos</option>
+                <option>Laudo</option>
+                <option>Atestado</option>
+                <option>Relatório</option>
+                <option>Ficha</option>
+            </select>
+        </div>
+        <div class="campo2">
+            <h2>Ordenado por</h2>
+            <select>
+                <option>Mais Recentes</option>
+                <option>Hoje</option>
+                <option>Esse mês</option>
+                <option>Nos últimos 6 meses</option>
+                <option>Esse ano</option>
+            </select>
+        </div>
+    </section>
     <table>
       <thead>
         <tr>
@@ -57,9 +99,9 @@
           <td>15:00</td>
           <td>Anotações da sessão</td>
           <td>
-                <i class="fa fa-eye"></i>
+                <i class="fa fa-eye" data-prontuario="Anotações da sessão do Paulo"></i>
                 <i class="fa fa-download"></i>
-                <i class="fa fa-edit"></i>
+                <i class="fa fa-edit" data-prontuario="Anotações da sessão do Paulo"></i>
           </td>
         </tr>
         <tr>

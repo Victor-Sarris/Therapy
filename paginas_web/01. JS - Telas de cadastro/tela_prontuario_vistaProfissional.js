@@ -21,18 +21,21 @@ function abrirModal(tipo, prontuario) {
   modal.style.display = 'block';
 }
 
-document.querySelectorAll('.visualizar').forEach(btn => {
-  btn.addEventListener('click', function() {
+// Evento para o ícone "Visualizar" (eye)
+document.querySelectorAll('.fa-eye').forEach(eyeIcon => {
+  eyeIcon.addEventListener('click', function() {
     abrirModal('visualizar', this.dataset.prontuario);
   });
 });
 
-document.querySelectorAll('.editar').forEach(btn => {
-  btn.addEventListener('click', function() {
+// Evento para o ícone "Editar" (edit)
+document.querySelectorAll('.fa-edit').forEach(editIcon => {
+  editIcon.addEventListener('click', function() {
     abrirModal('editar', this.dataset.prontuario);
   });
 });
 
+// Fechar modal
 closeBtn.onclick = () => modal.style.display = 'none';
 
 window.onclick = event => {

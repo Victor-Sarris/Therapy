@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <script src="https://kit.fontawesome.com/a2d9a56b2b.js" crossorigin="anonymous"></script>
   <link rel="shortcut icon" href="../01. and_icons_and_images/therapy_icon/FiveIcon/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
   <div class="app-container">
@@ -23,11 +24,11 @@
       </div>
       <nav>
         <ul>
-          <li><a href="#" class="active"><i class="fa-solid fa-gauge icon"></i><span class="text">Dashboard</span><span class="tooltip">Dashboard</span></a></li>
+          <li><a href="tela_dashboard.html"><i class="fa-solid fa-gauge icon"></i><span class="text">Dashboard</span><span class="tooltip">Dashboard</span></a></li>
           <li><a href="#"><i class="fa-solid fa-video icon"></i><span class="text">Meet</span><span class="tooltip">Meet</span></a></li>
-          <li><a href="tela_gestao_documentos.html"><i class="fa-solid fa-briefcase icon"></i><span class="text">Gestão</span><span class="tooltip">Gestão</span></a></li>
-          <li><a href="tela_historico_consultas.html"><i class="fa-solid fa-table-list"></i><span class="text">Histórico de Consultas</span><span class="tooltip">Histórico de Consultas</span></a></li>
-          <li><a href="tela_historico_videochamadas.html"><i class="fa-solid fa-film"></i><span class="text">Histórico de Videochamadas</span><span class="tooltip">Histórico de Videochamadas</span></a></li>
+          <li><a href="#" class="active"><i class="fa-solid fa-briefcase icon"></i><span class="text">Gestão</span><span class="tooltip">Gestão</span></a></li>
+           <li><a href="tela_historico_consultas.html"><i class="fa-solid fa-table-list"></i><span class="text">Histórico de Consultas</span><span class="tooltip">Histórico de Consultas</span></a></li>
+           <li><a href="tela_historico_videochamadas.html"><i class="fa-solid fa-film"></i><span class="text">Histórico de Videochamadas</span><span class="tooltip">Histórico de Videochamadas</span></a></li>
           <li><a href="#"><i class="fa-solid fa-calendar-days icon"></i><span class="text">Agenda</span><span class="tooltip">Agenda</span></a></li>
           <li><a href="tela_lista_paciente.html"><i class="fa-solid fa-users icon"></i><span class="text">Lista de Pacientes</span><span class="tooltip">Lista de Pacientes</span></a></li>
           <li><a href="#"><i class="fa-solid fa-user-doctor icon"></i><span class="text">Outros Especialistas</span><span class="tooltip">Outros Especialistas</span></a></li>
@@ -135,14 +136,21 @@
                   <td>user123</td>
                   <td>Ana Paula</td>
                   <td>Feminino</td>
-                  <td>📝 📁 ❌</td>
+                  <td class="opçoes">
+                    <i class="fa fa-eye"></i>
+                    <i class="fa fa-download"></i>
+                    <i class="fa fa-edit"></i></td>2
                   <td><span class="status active">Ativo</span></td>
                 </tr>
                 <tr>
                   <td>user456</td>
                   <td>João Silva</td>
                   <td>Masculino</td>
-                  <td>📝 📁 ❌</td>
+                  <td class="opçoes">
+                    <i class="fa fa-eye"></i>
+                    <i class="fa fa-download"></i>
+                    <i class="fa fa-edit"></i>
+                  </td>
                   <td><span class="status inactive">Inativo</span></td>
                 </tr>
               </tbody>

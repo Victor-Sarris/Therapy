@@ -242,7 +242,7 @@ header {
 }
 
 .welcome {
-  background: #f3f0fa;
+  background: #F3F0FA; 
   border-radius: 16px;
   padding: 32px;
   display: flex;
@@ -280,7 +280,6 @@ td {
   padding: 14px 12px;
   text-align: left;
   font-size: 13px;
-  padding: 5px;
 }
 
 i{

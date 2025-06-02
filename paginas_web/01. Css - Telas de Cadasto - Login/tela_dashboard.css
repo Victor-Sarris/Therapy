@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap'); /* fonte "urbanist" */
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); /* fonte poppins*/
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
     --primary: #7c3aed;
@@ -8,35 +7,41 @@
     --gray: #f3f4f6;
     --gray-dark: #6b7280;
     --white: #fff;
-    --shadow: 0 4px 24px rgba(60, 60, 120, 0logo08);
-     --branco-default: #fff;
-  --box-shadow-roxo: rgba(44, 0, 128, 0.15);
-  --btn-color-roxo:#5a23c8;
-  --btn-hover-roxo: #2b1e6b;
-  --link-login: #b36be2;
-  --link-login-hover: #5a23c8;
-  --link-home-list-hover: #b150a4;
-  --primary-color: #5a23c8;
-  --second-color: #1e98b6;
+    --shadow: 0 4px 24px rgba(60, 60, 120, 0.08);
+    --branco-default: #fff;
+    --box-shadow-roxo: rgba(44, 0, 128, 0.15);
+    --btn-color-roxo: #5a23c8;
+    --btn-hover-roxo: #2b1e6b;
+    --link-login: #b36be2;
+    --link-login-hover: #5a23c8;
+    --link-home-list-hover: #b150a4;
+    --primary-color: #5a23c8;
+    --second-color: #1e98b6;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif
+/* Reset completo */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
 }
 
 body {
-  background-color: var(--gray);
+    background-color: var(--gray);
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .app-container {
-  display: flex;
-  height: 100vh;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
 }
 
-/* Sidebar */
+/* Sidebar fixa */
 .sidebar {
     background: var(--white);
     width: 260px;
@@ -44,10 +49,16 @@ body {
     display: flex;
     flex-direction: column;
     padding: 32px 0 16px 0;
-    position: relative;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
     z-index: 2;
     transition: width 0.3s;
+    height: 100vh;
+    overflow-y: auto;
 }
+
 .sidebar .logo {
     display: flex;
     align-items: center;
@@ -59,8 +70,8 @@ body {
     margin-bottom: 32px;
 }
 
-.logo{
-  font-family: "Urbanist", sans-serif;
+.logo {
+    font-family: "Urbanist", sans-serif;
 }
 
 .logo img {
@@ -70,12 +81,14 @@ body {
     object-fit: cover;
     border: 2px solid var(--primary-light);
 }
+
 .sidebar .profile-mini {
     display: flex;
     align-items: center;
     gap: 12px;
     margin: 0 0 32px 32px;
 }
+
 .sidebar .profile-mini img {
     width: 38px;
     height: 38px;
@@ -83,20 +96,25 @@ body {
     object-fit: cover;
     border: 2px solid var(--primary-light);
 }
+
 .sidebar .profile-mini .name {
     font-size: 1rem;
     font-weight: 500;
 }
+
 .sidebar nav {
     flex: 1;
 }
+
 .sidebar ul {
     list-style: none;
     padding: 0 0 0 16px;
 }
+
 .sidebar li {
     margin-bottom: 18px;
 }
+
 .sidebar a {
     display: flex;
     align-items: center;
@@ -109,14 +127,17 @@ body {
     position: relative;
     transition: background 0.2s, color 0.2s;
 }
+
 .sidebar a.active, .sidebar a:hover {
     background: var(--primary-light);
     color: var(--primary);
 }
+
 .sidebar a .icon {
     font-size: 1.2rem;
     position: relative;
 }
+
 /* Tooltip */
 .sidebar a .tooltip {
     visibility: hidden;
@@ -135,219 +156,254 @@ body {
     transition: opacity 0.25s, transform 0.25s;
     z-index: 10;
 }
+
 .sidebar a:hover .tooltip {
     visibility: visible;
     opacity: 1;
     transform: translateY(-50%) scale(1);
 }
+
 .sidebar .logout {
     margin-top: 32px;
     margin-left: 16px;
 }
 
-main{
-  font-family: "Poppins", sans-serif;
+/* Conteúdo principal */
+main {
+    font-family: "Poppins", sans-serif;
+    margin-left: 260px;
+    width: calc(100% - 260px);
+    height: 100vh;
+    overflow-y: auto;
 }
 
 .main-content {
-  flex: 1;
-  padding: 20px;
-  overflow-y: auto;
+    padding: 20px;
 }
 
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
 }
 
 .welcome h1 {
-  font-size: 24px;
-  color: var(--text-color);
-  margin-bottom: 10px;
+    font-size: 24px;
+    color: var(--gray-dark);
+    margin-bottom: 10px;
 }
+
 .welcome h2 {
-  font-size: 20px;
-  margin-bottom: 8px;
+    font-size: 20px;
+    margin-bottom: 8px;
 }
+
 .welcome p {
-  color: #666;
-  font-size: 14px;
+    color: #666;
+    font-size: 14px;
 }
+
 .header-image img {
-  max-width: 150px;
+    max-width: 150px;
 }
 
 .main-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
 .progress-section,
 .calendar-section,
 .patients-list {
-  background: white;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-.calendar-section h3{
-  text-align: center;
+.calendar-section h3 {
+    text-align: center;
 }
 
 .donut-chart {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  margin: 20px auto;
-  border-radius: 50%;
-  background: conic-gradient(
-    var(--primary-color) 0% 70%,
-    var(--secondary-color) 70% 100%
-  );
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+    border-radius: 50%;
+    background: conic-gradient(
+        var(--primary-color) 0% 70%,
+        var(--second-color) 70% 100%
+    );
 }
 
 .chart-center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 150px;
-  height: 150px;
-  background: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  font-weight: bold;
-  color: var(--primary-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary-color);
 }
 
 .legend-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
 }
+
 .legend-item .dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  margin-right: 8px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 8px;
 }
-.dot.purple { background-color: var(--primary-color); }
-.dot.blue { background-color: var(--second-color); }
+
+.dot.purple {
+    background-color: var(--primary-color);
+}
+
+.dot.blue {
+    background-color: var(--second-color);
+}
 
 .actions-section {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
+
 .action-card {
-  background: white;
-  padding: 15px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
+
 .action-card img {
-  width: 40px;
-  height: 40px;
-  margin-right: 15px;
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
 }
 
 .calendar-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  text-align: center;
-  padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    padding: 10px;
 }
 
 .calendar-header {
-  font-weight: bold;
-  font-size: 18px;
-  color: var(--primary-color);
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--primary-color);
 }
 
 .calendar-weekdays,
 .calendar-days {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 6px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
 }
 
 .calendar-weekdays div {
-  font-weight: bold;
-  color: var(--primary-color);
+    font-weight: bold;
+    color: var(--primary-color);
 }
 
 .calendar-days div,
 .calendar-weekdays div {
-  background-color: #f1f1f1;
-  border-radius: 5px;
-  padding: 8px 0;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 8px 0;
 }
 
 .calendar-days div.empty {
-  background-color: transparent;
-}
-
-
-.calendar-placeholder {
-  background: #f1f1f1;
-  height: 200px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #888;
+    background-color: transparent;
 }
 
 .patients-list {
-  grid-column: span 3;
+    grid-column: span 3;
 }
+
 table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 15px;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
 }
+
 th, td {
-  padding: 12px;
-  text-align: left;
-  border-bottom: 1px solid #eee;
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
 }
+
+td {
+    padding: 12px 16px;
+    font-size: 13px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.opçoes {
+    color: var(--primary-color);
+    text-align: left;
+    font-size: 13px;
+}
+
 .status {
-  padding: 5px 10px;
-  border-radius: 15px;
-  font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 12px;
 }
+
 .status.active {
-  background-color: var(--success-color);
-  color: rgb(64, 219, 77);
+    color: rgb(64, 219, 77);
 }
+
 .status.inactive {
-  background-color: var(--danger-color);
-  color: rgb(235, 58, 58);
+    color: rgb(235, 58, 58);
 }
 
 /* Responsivo */
 @media (max-width: 768px) {
-  .main-grid {
-    grid-template-columns: 1fr;
-  }
-  .patients-list {
-    grid-column: span 1;
-  }
-  header {
-    flex-direction: column;
-    text-align: center;
-  }
-  .header-image {
-    margin-top: 20px;
-  }
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    
+    main {
+        margin-left: 0;
+        width: 100%;
+    }
+    
+    .main-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .patients-list {
+        grid-column: span 1;
+    }
+    
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .header-image {
+        margin-top: 20px;
+    }
 }

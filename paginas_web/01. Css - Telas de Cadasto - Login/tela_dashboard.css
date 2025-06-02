@@ -19,14 +19,7 @@
     --second-color: #1e98b6;
 }
 
-/* Reset completo */
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-}
+
 
 body {
     background-color: var(--gray);
@@ -34,14 +27,10 @@ body {
 }
 
 .app-container {
-    display: flex;
-    height: 100vh;
-    width: 100vw;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  min-height: 100vh;
 }
 
-/* Sidebar fixa */
 .sidebar {
     background: var(--white);
     width: 260px;
@@ -49,16 +38,10 @@ body {
     display: flex;
     flex-direction: column;
     padding: 32px 0 16px 0;
-    position: fixed;
-    left: 0;
-    top: 0;
-    bottom: 0;
+    position: relative;
     z-index: 2;
     transition: width 0.3s;
-    height: 100vh;
-    overflow-y: auto;
 }
-
 .sidebar .logo {
     display: flex;
     align-items: center;
@@ -70,8 +53,8 @@ body {
     margin-bottom: 32px;
 }
 
-.logo {
-    font-family: "Urbanist", sans-serif;
+.logo{
+  font-family: "Urbanist", sans-serif;
 }
 
 .logo img {
@@ -81,14 +64,12 @@ body {
     object-fit: cover;
     border: 2px solid var(--primary-light);
 }
-
 .sidebar .profile-mini {
     display: flex;
     align-items: center;
     gap: 12px;
     margin: 0 0 32px 32px;
 }
-
 .sidebar .profile-mini img {
     width: 38px;
     height: 38px;
@@ -96,25 +77,20 @@ body {
     object-fit: cover;
     border: 2px solid var(--primary-light);
 }
-
 .sidebar .profile-mini .name {
     font-size: 1rem;
     font-weight: 500;
 }
-
 .sidebar nav {
     flex: 1;
 }
-
 .sidebar ul {
     list-style: none;
     padding: 0 0 0 16px;
 }
-
 .sidebar li {
     margin-bottom: 18px;
 }
-
 .sidebar a {
     display: flex;
     align-items: center;
@@ -127,17 +103,14 @@ body {
     position: relative;
     transition: background 0.2s, color 0.2s;
 }
-
 .sidebar a.active, .sidebar a:hover {
     background: var(--primary-light);
     color: var(--primary);
 }
-
 .sidebar a .icon {
     font-size: 1.2rem;
     position: relative;
 }
-
 /* Tooltip */
 .sidebar a .tooltip {
     visibility: hidden;
@@ -156,13 +129,11 @@ body {
     transition: opacity 0.25s, transform 0.25s;
     z-index: 10;
 }
-
 .sidebar a:hover .tooltip {
     visibility: visible;
     opacity: 1;
     transform: translateY(-50%) scale(1);
 }
-
 .sidebar .logout {
     margin-top: 32px;
     margin-left: 16px;
@@ -171,21 +142,20 @@ body {
 /* Conteúdo principal */
 main {
     font-family: "Poppins", sans-serif;
-    margin-left: 260px;
+    margin-left: 10px;
     width: calc(100% - 260px);
     height: 100vh;
-    overflow-y: auto;
 }
 
 .main-content {
-    padding: 20px;
+    padding: 0 8px;
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 
 .welcome h1 {
@@ -211,14 +181,14 @@ header {
 .main-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 10px;
 }
 
 .progress-section,
 .calendar-section,
 .patients-list {
     background: white;
-    padding: 20px;
+    padding: 10px;
     border-radius: 15px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
@@ -231,11 +201,12 @@ header {
     position: relative;
     width: 200px;
     height: 200px;
-    margin: 20px auto;
+    margin: 10px auto;
     border-radius: 50%;
     background: conic-gradient(
-        var(--primary-color) 0% 70%,
-        var(--second-color) 70% 100%
+        var(--primary-color) 0% 25%,
+        var(--second-color) 0% 70%,
+        var(--gray) 0% 100%
     );
 }
 
@@ -285,7 +256,7 @@ header {
 
 .action-card {
     background: white;
-    padding: 15px;
+    padding: 10px;
     border-radius: 10px;
     display: flex;
     align-items: center;

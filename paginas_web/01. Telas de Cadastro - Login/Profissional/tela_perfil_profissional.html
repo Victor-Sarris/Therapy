@@ -11,30 +11,50 @@
 <body>
     <div class="container">
         <button class="mobile-menu-btn" id="menuToggle"><i class="fas fa-bars"></i></button>
-        <aside class="sidebar" id="sidebar">
-            <div class="logo"><img src="../..//01. and_icons_and_images/therapy_icon/logo_therapy.png"> Therapy</div>
-            <div class="profile-mini">
-                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto do Cliente">
-                <div class="name"><a href="#" class="active">Felipe Sousa</a></div>
-            </div>
-            <nav>  <!-- obs.:sidebar-->
-                <ul>
-                    <li><a href="tela_dashboard.html"><i class="fa-solid fa-gauge icon"></i><span class="text">Dashboard</span><span class="tooltip">Dashboard</span></a></li>
-                    <li><a href="#"><i class="fa-solid fa-video icon"></i><span class="text">Meet</span><span class="tooltip">Meet</span></a></li>
-                    <li><a href="tela_gestao_documentos.html"><i class="fa-solid fa-briefcase icon"></i><span class="text">Gestão</span><span class="tooltip">Gestão</span></a></li>
-                    <li><a href="tela_historico_consultas.html"><i class="fa-solid fa-table-list"></i><span class="text">Histórico de Consultas</span><span class="tooltip">Histórico de Consultas</span></a></li>
-                    <li><a href="tela_historico_videochamadas.html"><i class="fa-solid fa-film"></i><span class="text">Histórico de Videochamadas</span><span class="tooltip">Histórico de Videochamadas</span></a></li>
-                    <li><a href="tela_calendario_agenda.html"><i class="fa-solid fa-calendar-days icon"></i><span class="text">Agenda</span><span class="tooltip">Agenda</span></a></li>
-                    <li><a href="tela_lista_paciente.html"><i class="fa-solid fa-users icon"></i><span class="text">Lista de Pacientes</span><span class="tooltip">Lista de Pacientes</span></a></li>
-                    <li><a href="#"><i class="fa-solid fa-user-doctor icon"></i><span class="text">Outros Especialistas</span><span class="tooltip">Outros Especialistas</span></a></li>
-                    <li><a href="tela_mensagem_chat.html"><i class="fa-solid fa-comments icon"></i><span class="text">Mensagens</span><span class="tooltip">Mensagens</span></a></li>
-                    <li><a href="#"><i class="fa-solid fa-gear icon"></i><span class="text">Ajustes</span><span class="tooltip">Ajustes</span></a></li>
-                </ul>
-            </nav>
-            <div class="logout">
-                <a href="#"><i class="fa-solid fa-arrow-right-from-bracket icon"></i><span class="text">Sair da Conta</span><span class="tooltip">Sair da Conta</span></a>
-            </div>
-        </aside>
+        <aside class="sidebar">
+      <div class="logo">
+        <img src="../../01. and_icons_and_images/therapy_icon/logo_therapy.png" alt="logo">
+        Therapy
+      </div>
+      <div class="profile-mini">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto do Psicólogo">
+        <div class="name"><a href="tela_perfil_profissional.html" class="active">Felipe Sousa</a></div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="tela_dashboard.html"><i class="fa-solid fa-gauge icon"></i><span class="text">Dashboard</span><span class="tooltip">Dashboard</span></a></li>
+          <li class="container-submenu">
+            <a href="#"><i class="fa-solid fa-video icon"></i><span class="text">Meet</span><span class="tooltip">Meet</span></a>
+            <ul class="submenu">
+              <li><a href="tela_historico_videochamadas.html">Histórico de Meet's</a></li>
+            </ul>
+          </li>
+          <li class="container-submenu">
+            <a href="#"><i class="fa-solid fa-briefcase icon"></i><span class="text">Gestão</span><span class="tooltip">Gestão</span></a>
+            <ul class="submenu">
+              <li><a href="tela_gestao_documentos.html">Gestão de Documentos</a></li>
+              <li><a href="tela_gestao_prontuario.html">Gestão de Prontuários</a></li>
+              <li><a href="tela_gestao_financas.html">Gestão de Finanças</a></li>
+            </ul>
+          </li>
+           <li><a href="tela_historico_consultas_profissional.html"><i class="fa-solid fa-table-list"></i><span class="text">Histórico de Consultas</span><span class="tooltip">Histórico de Consultas</span></a></li>
+           <li><a href="tela_historico_videochamadas.html"><i class="fa-solid fa-film"></i><span class="text">Histórico de Videochamadas</span><span class="tooltip">Histórico de Videochamadas</span></a></li>
+          <li class="container-submenu">
+            <a href="#"><i class="fa-solid fa-calendar-days icon"></i><span class="text">Agenda</span><span class="tooltip">Agenda</span></a>
+            <ul class="submenu">
+              <li><a href="tela_calendario_agenda.html">Calendario de Consultas</a></li>
+            </ul>
+          </li>
+          <li><a href="tela_lista_paciente.html"><i class="fa-solid fa-users icon"></i><span class="text">Lista de Pacientes</span><span class="tooltip">Lista de Pacientes</span></a></li>
+          <li><a href="#"><i class="fa-solid fa-user-doctor icon"></i><span class="text">Outros Especialistas</span><span class="tooltip">Outros Especialistas</span></a></li>
+          <li><a href="tela_mensagem_chat.html"><i class="fa-solid fa-comments icon"></i><span class="text">Mensagens</span><span class="tooltip">Mensagens</span></a></li>
+          <li><a href="#"><i class="fa-solid fa-gear icon"></i><span class="text">Ajustes</span><span class="tooltip">Ajustes</span></a></li>
+        </ul>
+      </nav>
+      <div class="logout">
+        <a href="#"><i class="fa-solid fa-arrow-right-from-bracket icon"></i><span class="text">Sair da Conta</span><span class="tooltip">Sair da Conta</span></a>
+      </div>
+    </aside>
         <main class="main">
             <div class="profile-header">
                 <div class="profile-photo">
@@ -86,5 +106,6 @@
         </main>
     </div>
     <script src="profile.js"></script>
+    <script src="../../01. JS - Telas de cadastro/Profissional/sidebar.js"></script>
 </body>
 </html>

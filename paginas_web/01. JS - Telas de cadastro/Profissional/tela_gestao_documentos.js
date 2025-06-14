@@ -23,3 +23,4 @@ window.onclick = function(event) {
 /* anotaações:
 
 O modal ainda não abrindo, tenho que arrumar isso depois */
+

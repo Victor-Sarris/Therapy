@@ -379,3 +379,13 @@ td i:hover {
   font-size: 24px;
   cursor: pointer;
 }
+
+.submenu {
+  list-style: none;
+  padding-left: 30px;
+  display: none;
+}
+
+.container-submenu.open .submenu {
+  display: block;
+}

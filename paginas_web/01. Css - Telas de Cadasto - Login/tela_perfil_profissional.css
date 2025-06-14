@@ -135,6 +135,18 @@ body {
     margin-top: 32px;
     margin-left: 16px;
 }
+
+.submenu {
+  list-style: none;
+  padding-left: 30px;
+  display: none;
+}
+
+.container-submenu.open .submenu {
+  display: block;
+}
+
+
 /* Main Content */
 .main {
     flex: 1;

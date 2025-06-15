@@ -5,35 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Editar Perfil - Therapy</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <link rel="stylesheet" href="../..//01. Css - Telas de Cadasto - Login/Paciente/tela_perfil_cliente_edicao.css" />
-  <link rel="shortcut icon" href="../01. and_icons_and_images/icons_tela_perfil_profissional/FiveIcon/favicon.ico" type="image/x-icon">
-  <link rel="shortcut icon" href="../01. and_icons_and_images/therapy_icon/FiveIcon/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="../../01. Css - Telas de Cadasto - Login/Paciente/tela_perfil_cliente_edicao.css" />
+  <link rel="stylesheet" href="../../01. Css - Telas de Cadasto - Login/Paciente/popup-meet.css" />
+  <link rel="shortcut icon" href="../../01. and_icons_and_images/icons_tela_perfil_profissional/FiveIcon/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="../../01. and_icons_and_images/therapy_icon/FiveIcon/favicon.ico" type="image/x-icon">
 </head>
 <body>
   <div class="container">
-    <div class="container">
-        <aside class="sidebar" id="sidebar">
-            <div class="logo"><img src="../..//01. and_icons_and_images/therapy_icon/logo_therapy.png"logo"> Therapy</div>
-            <div class="profile-mini">
-                <img src="../..//01. and_icons_and_images/img_cliente/cliente.png" alt="Foto do cliente">
-                <div class="name"><a href="tela_perfil_cliente.html">Davi Oliveira</a></div>
-            </div>
-            <nav>  <!-- obs.:sidebar cliente-->
-                <ul>
-                    <li><a href=""><i class="fa-solid fa-gauge icon"></i><span class="text">Tela Principal</span><span class="tooltip">Dashboard</span></a></li>
-                    <li><a href="#"><i class="fa-solid fa-video icon"></i><span class="text">Meet</span><span class="tooltip">Meet</span></a></li>
-                    <li><a href=""><i class="fa-solid fa-briefcase icon"></i><span class="text">Gestão</span><span class="tooltip">Gestão</span></a></li>
-                    <li><a href=""><i class="fa-solid fa-table-list"></i><span class="text">Histórico de Consultas</span><span class="tooltip">Histórico de Consultas</span></a></li>
-                    <li><a href="#"><i class="fa-solid fa-calendar-days icon"></i><span class="text">Agenda</span><span class="tooltip">Agenda</span></a></li>
-                    <li><a href="#"><i class="fa-solid fa-user-doctor icon"></i><span class="text">Outros Especialistas</span><span class="tooltip">Outros Especialistas</span></a></li>
-                    <li><a href="#"><i class="fa-solid fa-comments icon"></i><span class="text">Mensagens</span><span class="tooltip">Mensagens</span></a></li>
-                    <li><a href="#"><i class="fa-solid fa-gear icon"></i><span class="text">Ajustes</span><span class="tooltip">Ajustes</span></a></li>
-                </ul>
-            </nav>
-            <div class="logout">
-                <a href="#"><i class="fa-solid fa-arrow-right-from-bracket icon"></i><span class="text">Sair da Conta</span><span class="tooltip">Sair da Conta</span></a>
-            </div>
-        </aside>
+    <aside class="sidebar" id="sidebar">
+        <div class="logo"><img src="../../01. and_icons_and_images/therapy_icon/logo_therapy.png" alt="logo"> Therapy</div>
+        <div class="profile-mini">
+            <img src="../../01. and_icons_and_images/img_cliente/cliente.png" alt="Foto do cliente">
+            <div class="name"><a href="tela_perfil_cliente.html">Davi Oliveira</a></div>
+        </div>
+        <nav>  <!-- obs.:sidebar cliente-->
+            <ul>
+                <li><a href=""><i class="fa-solid fa-gauge icon"></i><span class="text">Tela Principal</span><span class="tooltip">Dashboard</span></a></li>
+                <li><a href="#" onclick="showMeetPopup()"><i class="fa-solid fa-video icon"></i><span class="text">Meet</span><span class="tooltip">Meet</span></a></li>
+                <li><a href=""><i class="fa-solid fa-briefcase icon"></i><span class="text">Gestão</span><span class="tooltip">Gestão</span></a></li>
+                <li><a href=""><i class="fa-solid fa-table-list"></i><span class="text">Histórico de Consultas</span><span class="tooltip">Histórico de Consultas</span></a></li>
+                <li><a href="#"><i class="fa-solid fa-calendar-days icon"></i><span class="text">Agenda</span><span class="tooltip">Agenda</span></a></li>
+                <li><a href="#"><i class="fa-solid fa-user-doctor icon"></i><span class="text">Outros Especialistas</span><span class="tooltip">Outros Especialistas</span></a></li>
+                <li><a href="#"><i class="fa-solid fa-comments icon"></i><span class="text">Mensagens</span><span class="tooltip">Mensagens</span></a></li>
+                <li><a href="#"><i class="fa-solid fa-gear icon"></i><span class="text">Ajustes</span><span class="tooltip">Ajustes</span></a></li>
+            </ul>
+        </nav>
+        <div class="logout">
+            <a href="#"><i class="fa-solid fa-arrow-right-from-bracket icon"></i><span class="text">Sair da Conta</span><span class="tooltip">Sair da Conta</span></a>
+        </div>
+    </aside>
+    
     <main class="content">
       <header class="topbar">
         <h2>Edite seu Perfil Cliente</h2>
@@ -44,7 +45,7 @@
 
       <section class="profile-section">
         <div class="profile-header">
-          <img src="../..//01. and_icons_and_images/img_cliente/cliente.png" alt="Foto" class="profile-pic" />
+          <img src="../../01. and_icons_and_images/img_cliente/cliente.png" alt="Foto" class="profile-pic" />
           <div>
             <h3>Davi Oliveira</h3>
             <p> DaviOliveira@gmail.com</p>
@@ -52,62 +53,98 @@
         </div>
 
         <form class="profile-form">
-  <div class="form-group">
-    <h4>Sobre Você</h4>
-    
-    <div class="input-group">
-      <input type="text" id="nome" placeholder=" " />
-      <label for="nome">Nome</label>
-    </div>
-    
-    <div class="input-group">
-      <input type="email" id="email" placeholder=" " />
-      <label for="email">Email</label>
-    </div>
-    
-    <div class="input-group">
-      <input type="password" id="senha" placeholder=" " />
-      <label for="senha">Senha</label>
-    </div>
-    
-    <div class="form-row">
-      <div class="input-group">
-        <input type="text" id="telefone" placeholder=" " />
-        <label for="telefone">Telefone</label>
-      </div>
-      <div class="input-group">
-        <input type="text" id="cpf" placeholder=" " />
-        <label for="cpf">CPF</label>
-      </div>
-    </div>
-    
-    <div class="input-group">
-      <input type="text" id="genero" placeholder=" " />
-      <label for="genero">Gênero</label>
-    </div>
-    
-    <button type="button" class="add-email">Add Outro Email</button>
+          <div class="form-group">
+            <h4>Sobre Você</h4>
+            
+            <div class="input-group">
+              <input type="text" id="nome" placeholder=" " />
+              <label for="nome">Nome</label>
+            </div>
+            
+            <div class="input-group">
+              <input type="email" id="email" placeholder=" " />
+              <label for="email">Email</label>
+            </div>
+            
+            <div class="input-group">
+              <input type="password" id="senha" placeholder=" " />
+              <label for="senha">Senha</label>
+            </div>
+            
+            <div class="form-row">
+              <div class="input-group">
+                <input type="text" id="telefone" placeholder=" " />
+                <label for="telefone">Telefone</label>
+              </div>
+              <div class="input-group">
+                <input type="text" id="cpf" placeholder=" " />
+                <label for="cpf">CPF</label>
+              </div>
+            </div>
+            
+            <div class="input-group">
+              <input type="text" id="genero" placeholder=" " />
+              <label for="genero">Gênero</label>
+            </div>
+            
+            <button type="button" class="add-email">Add Outro Email</button>
+          </div>
+
+          <div class="form-group">
+            <h4>Complementos</h4>
+            
+            <div class="input-group">
+              <textarea id="Bio" placeholder=" "></textarea>
+              <label for="Bio">Bio</label>
+            </div>
+            
+            <div class="input-group">
+              <textarea id="Objetivos do Tratamento" placeholder=" "></textarea>
+              <label for="Objetivos do Tratamento">Objetivos do Tratamento</label>
+            </div>
+            
+            <div class="upload-box">
+              <p>Arraste e solte o arquivo de imagem aqui</p>
+              <button type="button">Escolher arquivo</button>
+            </div>
+          </div>
+        </form>
+      </section>
+    </main>
   </div>
 
-  <div class="form-group">
-    <h4>Complementos</h4>
-    
-    <div class="input-group">
-      <textarea id="Bio" placeholder=" "></textarea>
-      <label for="Bio">Bio</label>
-    </div>
-    
-    <div class="input-group">
-      <textarea id="Objetivos do Tratamento" placeholder=" "></textarea>
-      <label for="Objetivos do Tratamento">Objetivos do Tratamento</label>
-    </div>
-    
-    <div class="upload-box">
-      <p>Arraste e solte o arquivo de imagem aqui</p>
-      <button type="button">Escolher arquivo</button>
+  <!-- Pop-up de Confirmação de Consulta -->
+  <div class="popup-overlay" id="meetPopup">
+    <div class="popup-content">
+      <div class="appointment-card">
+        <div class="appointment-header">
+          <div class="appointment-profile">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto do profissional">
+            <div class="appointment-info">
+              <span>Felipe Sousa</span>
+              <span>Psicólogo</span>
+            </div>
+          </div>
+          <div style="text-align: right; color: #6b7280; font-size: 0.98em;">50 minutos</div>
+        </div>
+        <div class="appointment-details">
+          <span>&#128197; 10/06/25</span>
+          <span>&#128337; 09:00</span>
+        </div>
+        <div class="appointment-actions">
+          <button class="btn-primary" onclick="location.href=' https://meet.google.com/jkb-npqo-dkw'">Iniciar Sessão</button>
+          <button class="btn-outline" onclick="openChat()">Chat</button>
+
+
+
+        </div>
+        <div class="appointment-footer">
+          <a href="#" onclick="hideMeetPopup()">Cancelar</a>
+        </div>
+      </div>
     </div>
   </div>
-</form>
-  </div>
+
+  <script src="../../01. JS - Telas de cadastro/Paciente/popup-meet.JS"></script>
 </body>
 </html>

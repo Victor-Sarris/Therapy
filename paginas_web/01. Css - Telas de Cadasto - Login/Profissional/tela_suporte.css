@@ -78,7 +78,7 @@ body {
 /* Sidebar */
 .sidebar {
     background: var(--white);
-    width: 280px;
+    min-width: 280px;
     box-shadow: var(--shadow);
     display: flex;
     flex-direction: column;

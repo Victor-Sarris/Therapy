@@ -303,7 +303,6 @@ i{
     background-color: rgba(135, 197, 41, 0.187);
     padding: 10px;
     border-radius: 100px;
-    border: rgba(135, 197, 41, 0.523);
 }
 
 .statusPendente{
@@ -314,10 +313,11 @@ i{
 }
 
 .statusNaoPago{
-   width: 100%;
+    width: 100%;
     background-color: rgba(255, 0, 0, 0.523);
     padding: 10px;
     border-radius: 100px; 
+    font-size: 12px;
 }
 
 .documents-sections{

@@ -293,6 +293,10 @@ form butoon [type="submit"]{
     font-family: 'Inter', Arial, sans-serif;
 }
 
+.bnt-enviar{
+    text-decoration: none;
+}
+
 /* Estelização do checkbox como botões no campo sua especialiadade */
     .checkbox-group {
       display: flex;

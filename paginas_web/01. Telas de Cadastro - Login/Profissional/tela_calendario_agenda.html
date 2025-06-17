@@ -314,7 +314,7 @@
                     <span class="bg-white text-gray-600 rounded-full w-6 h-6 flex items-center justify-center text-sm">
                         <i class="fas fa-plus"></i>
                     </span>
-                    <span class="text-sm font-medium">Add Notas</span>
+                    <span class="text-sm font-medium" id="addNotasBtn" class="modal">Add Consulta</span>
                 </button>
 
                 <!-- Componente Lembretes -->
@@ -342,7 +342,26 @@
         </main>
     </div>
 
+
+    <!-- Modal -->
+<div id="modalNotas" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Nova Consulta</h2>
+    <div class="container-modal">
+        <p>Nome do paciente:</p>
+        <input type="text">
+        <p>Data da consulta: </p>
+        <input type="date" placeholder="Data da consulta">
+        <p>Anotações sobre a sessão:</p>
+        <textarea placeholder="Faça anotações sobre a sessão..." rows="5" style="width: 100%;"></textarea>
+    </div>
+    <button id="salvarModalBnt" style="margin-top: 10px;">Salvar Nota</button>
+  </div>
+</div>
+
     <script src="../../01. JS - Telas de cadastro/Profissional/sidebar.js"></script>
+    <script src="../../01. JS - Telas de cadastro/Profissional/tela_calendario_agenda.js"></script>
 </body>
 
 </html>

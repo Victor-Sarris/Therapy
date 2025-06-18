@@ -343,7 +343,7 @@
     </div>
 
 
-    <!-- Modal -->
+    <!-- Modal de criação de notas -->
 <div id="modalNotas" class="modal">
   <div class="modal-content">
     <span class="close">&times;</span>
@@ -356,12 +356,33 @@
         <p>Anotações sobre a sessão:</p>
         <textarea placeholder="Faça anotações sobre a sessão..." rows="5" style="width: 100%;"></textarea>
     </div>
-    <button id="salvarModalBnt" style="margin-top: 10px;">Salvar Nota</button>
+    <button id="salvarModalBnt">Salvar Nota</button>
   </div>
 </div>
+
+<!-- Modal de confirmação -->
+
+<!-- Modal de Confirmação -->
+<div id="modalConfirmacao" class="modal" style="display: none;">
+  <div class="modal-content" style="text-align: center;">
+    <div class="container-titulo" style="margin-bottom: 10px;">
+      <img src="../../01. and_icons_and_images/image_tela_calendario_agenda/checked.png" alt="Ícone de check" width="60">
+    </div>
+    <h2 style="margin-top: 1rem;">Agendamento confirmado</h2>
+    <p>E-mail enviado para</p>
+    <p style="margin-bottom: 1rem;"><strong>user0@gmail.com</strong></p>
+    <hr style="margin: 10px 0;">
+    <p style="font-size: 13px; margin-top: 1rem; margin-bottom: 1rem;"><strong>[ Therapy PI ] Agendamento de consulta Psicanálise.</strong></p>
+    <p style="margin-bottom: 1rem;">Quinta-feira · 07:05 - 7:45am<br>(GMT -03:00) Horário Padrão de Brasília - Fortaleza</p>
+    <hr style="margin: 10px 0;">
+    <p style="margin-top: 1rem;">Precisa mudar?<br><a href="#" class="cancelarConsultaBnt">Cancelar horário</a>
+  </div>
+</div>
+
+
+
 
     <script src="../../01. JS - Telas de cadastro/Profissional/sidebar.js"></script>
     <script src="../../01. JS - Telas de cadastro/Profissional/tela_calendario_agenda.js"></script>
 </body>
-
 </html>

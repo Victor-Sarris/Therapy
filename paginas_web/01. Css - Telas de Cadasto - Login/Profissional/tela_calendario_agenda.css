@@ -231,3 +231,23 @@ textarea {
     color: var(--primary);
   }
 }
+
+#salvarModalBnt{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.container-titulo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.cancelarConsultaBnt{
+  color: red;
+  background-color: transparent;
+  border: none;
+}
+

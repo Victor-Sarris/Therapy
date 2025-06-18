@@ -250,6 +250,10 @@ select:not([value=""]) + label {
   background: #7c5fe6;
 }
 
+.bnt-enviar{
+  text-decoration: none;
+}
+
 @media (max-width: 900px) {
   .main-title {
     margin-left: 32px;

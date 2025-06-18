@@ -1,4 +1,5 @@
-/ Função para controlar a sidebar automaticamente durante a pesquisa
+// Função para controlar a sidebar automaticamente durante a pesquisa
+
         function toggleSidebarForSearch() {
             const sidebar = document.getElementById('sidebar');
             const mainContainer = document.querySelector('.main-container');
@@ -127,3 +128,23 @@
             sidebar.classList.remove('collapsed');
             mainContainer.classList.remove('sidebar-collapsed');
         });
+
+
+
+
+
+/*
+Código para criacao de modal sobre o especialista
+*/
+
+// Abrir modal ao clicar em "Agendar Consulta"
+document.querySelectorAll('.btn-more').forEach(button => {
+    button.addEventListener('click', () => {
+        document.getElementById('consultaModal').style.display = 'flex';
+    });
+});
+
+// Fechar modal
+function fecharModal() {
+    document.getElementById('consultaModal').style.display = 'none';
+}

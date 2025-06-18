@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="../../01. and_icons_and_images/therapy_icon/FiveIcon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="../../01. Css - Telas de Cadasto - Login/Paciente/tela_historico_consulta.css">
+    <link rel="stylesheet" href="../../01. Css - Telas de Cadasto - Login/Paciente/popup-meets.css">
     <script src="https://kit.fontawesome.com/a2d9a56b2b.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -71,6 +72,36 @@
           </div>
       </main>
     </div>
+
+    <!-- Popup de Meet -->
+    <div class="popup-overlay" id="meetPopup">
+      <div class="popup-content">
+        <div class="appointment-card">
+          <div class="appointment-header">
+            <div class="appointment-profile">
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto do profissional">
+              <div class="appointment-info">
+                <span>Felipe Sousa</span>
+                <span>Psicólogo</span>
+              </div>
+            </div>
+            <div style="text-align: right; color: #6b7280; font-size: 0.98em;">50 minutos</div>
+          </div>
+          <div class="appointment-details">
+            <span>&#128197; 10/06/25</span>
+            <span>&#128337; 09:00</span>
+          </div>
+          <div class="appointment-actions">
+            <button class="btn-primary" onclick="window.open('https://meet.google.com/jkb-npqo-dkw', '_blank')">Iniciar Sessão</button>
+            <button class="btn-outline" onclick="openChat()">Chat</button>
+          </div>
+          <div class="appointment-footer">
+            <a href="#" onclick="hideMeetPopup()">Cancelar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="../../01. JS - Telas de cadastro/Paciente/popup-meet.js"></script>
     <script src="../../01. JS - Telas de cadastro/Paciente/tela_historico_consultas.js"></script>
 </body>

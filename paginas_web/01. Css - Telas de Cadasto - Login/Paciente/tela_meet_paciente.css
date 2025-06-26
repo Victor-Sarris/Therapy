@@ -24,6 +24,12 @@ body {
     color: #222;
 }
 
+main {
+  margin-left: 80px;
+  width: calc(100% - 300px);
+}
+
+
 /* Layout principal com sidebar */
 .main-container {
     display: flex;
@@ -323,7 +329,6 @@ header {
 }
 
 nav a {
-  margin-left: 30px;
   text-decoration: none;
   color: #333;
   font-weight: 500;
@@ -353,16 +358,12 @@ main {
 
 .video-call {
   position: relative;
-  align-items: center;
+  max-width: 800px;
+  margin-left: 60px;
 }
 
 .video-container {
-  position: relative;
-  background: #000;
-  border-radius: 12px;
-  overflow: hidden;
-  width: 900px;
-  align-items: center;
+  width: 100%;
 }
 
 .video-container img {

@@ -1,0 +1,67 @@
+<!-- /templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suporte - Therapy</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="shortcut icon" href="../../Aula2410/public/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../chat_bot/static/style.css">
+    <link rel="shortcut icon" href="../../paginas_web/01. and_icons_and_images/therapy_icon/FiveIcon/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo ao suporte da Therapy</h1>
+    </header>
+    
+    <main>
+        <section id="features" class="features">
+            <h2>Como podemos te ajudar?</h2>
+            <ul class="card-list">
+                <li class="card">📞 Fale com um atendente</li>
+                <li class="card">📚 Acesse nosso FAQ</li>
+                <li class="card">🗓️ Saiba como remarcar consultas</li>
+                <li class="card">🔐 Dificuldades com login ou senha</li>
+                <li class="card">💳 Informações sobre pagamentos e planos</li>
+            </ul>
+
+        </section>
+
+        <section id="about" class="about">
+            <h2>Sobre Nós</h2>
+            <p>
+                Nossa plataforma de terapia online oferece teleconsultas por vídeo chamada, gestão de informações das consultas e comunicação direta entre psicólogos e pacientes. Com acessibilidade ampliada, promovendo saúde mental em qualquer lugar, conectando pessoas e profissionais. Clique no botão inferior direito para iniciar uma conversa com nosso chatbot, que está disponível 24 horas por dia, 7 dias por semana.
+            </p>
+        </section>
+
+        <section>
+            <a href="../../paginas_web/01. Telas de Cadastro - Login/Profissional/tela_dashboard.html"><button class="button-exit">Sair do Suporte e voltar a tela inicial</button></a>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Therapy. Todos os direitos reservados.</p>
+    </footer>
+
+    <div id="chatbot-button" class="chatbot-button">
+        <i class="fas fa-comments"></i>
+    </div>
+
+    <div id="chatbot-container" class="chatbot-container">
+        <div class="chatbot-header">
+            <h3>Chatbot</h3>
+            <button id="close-chatbot">Fechar</button>
+        </div>
+        <div id="chat-messages" class="chat-messages"></div>
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Digite sua mensagem...">
+            <button onclick="sendMessage()">Enviar</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

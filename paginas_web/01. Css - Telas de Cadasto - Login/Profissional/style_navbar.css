@@ -1,4 +1,4 @@
-/* Sidebar */
+
 .sidebar {
     background: var(--white);
     width: 260px;
@@ -9,7 +9,6 @@
     position: relative;
     z-index: 2;
     transition: width 0.3s;
-    margin-right: 10px;
 }
 .sidebar .logo {
     display: flex;
@@ -116,8 +115,4 @@
 
 .container-submenu.open .submenu {
   display: block;
-}
-
-.header-image img{
-    width: 150px;
 }

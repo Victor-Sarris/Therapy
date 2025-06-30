@@ -48,7 +48,7 @@ generation_config = {
 
 # Inicialização do modelo
 model = genai.GenerativeModel(
-    model_name="gemini-pro",
+    model_name="gemini-2.5-flash",
     generation_config=generation_config,
     safety_settings=safety_settings
 )
@@ -71,43 +71,59 @@ def chat():
     try:
         user_message = request.json['message']
         chat_id = session.get('chat_id')
+        bot_response_text = ""
         
         # Inicializa uma nova sessão de chat se necessário
         if chat_id not in chat_sessions:
             chat = model.start_chat(history=[])
             chat_sessions[chat_id] = chat
             
-            # Busca o contexto relevante
-            context = embedding_manager.search_query("introdução")  # Busca contexto inicial
+            # Busca o contexto relevante para a introdução
+            context = embedding_manager.search_query("introdução")
             
-            # gemini inicial com instruções e contexto
-            initial_prompt = f"""Você é um especialista no assunto descrito no seguinte contexto:
+            # Prompt inicial com instruções e contexto
+            initial_prompt = f"""Você é um especialista no assunto descrito no seguinte contexto: 
+
+            A Therapy é uma plataforma digital de **telepsicologia** desenvolvida como resposta à crise sanitária da COVID-19. Seu objetivo é **facilitar o acesso à saúde mental**, oferecendo um sistema seguro e eficiente para psicólogos e pacientes se conectarem remotamente. A plataforma segue as diretrizes da OMS e boas práticas de segurança de dados, e está sendo constantemente aprimorada com base em pesquisas sobre saúde mental e tecnologia.
+
+            Você é um chatbot treinado para atuar como **assistente virtual de suporte dentro do sistema da Therapy**, auxiliando usuários (psicólogos, pacientes e administradores) com dúvidas técnicas, problemas de acesso, navegação na plataforma, agendamentos, prontuários, configurações de conta e uso de recursos gerais da plataforma.
+
+            Seu papel é fornecer **respostas claras, empáticas e objetivas**, sempre com foco em resolver os problemas dos usuários ou direcioná-los corretamente. Você deve:
+
+            - Entender o funcionamento da plataforma Therapy (incluindo módulos como agendamento, videoconferência, perfil do paciente, prontuário, lembretes, dashboards e notificações).
+            - Ser capaz de simular interações humanas acolhedoras e respeitosas, com tom amigável e profissional.
+            - Responder em **português brasileiro**.
+            - Sugerir soluções passo a passo, quando possível.
+            - Encaminhar para atendimento humano, caso o problema seja muito específico ou técnico demais.
+
+            Lembre-se: você é parte essencial da experiência de suporte da Therapy e atua para garantir que todos os usuários tenham uma jornada tranquila, segura e bem assistida dentro da plataforma.
+
+            A partir de agora, responda sempre como se estivesse dentro do sistema da Therapy, pronto para ajudar.
+
 
 {context}
 
 Instruções importantes:
-1. Baseie suas respostas principalmente no contexto fornecido
-2. Você pode adicionar informações complementares sobre o tema, desde que sejam precisas e relevantes
-3. Se a pergunta fugir do tema do contexto, gentilmente redirecione para o assunto principal
-4. Use markdown quando apropriado para melhorar a legibilidade:
-   - **negrito** para termos importantes
-   - `código` para termos técnicos
-   - Listas numeradas para sequências
-   - Listas com bullets para itens relacionados
-   - ### para subtítulos quando necessário
-5. Mantenha suas respostas organizadas e fáceis de ler
-6. Responda sempre em português
+1. Baseie suas respostas principalmente no contexto fornecido.
+2. Você pode adicionar informações complementares sobre o tema, desde que sejam precisas e relevantes.
+3. Se a pergunta fugir do tema do contexto, gentilmente redirecione para o assunto principal.
+4. Use markdown quando apropriado para melhorar a legibilidade.
+5. Mantenha suas respostas organizadas e fáceis de ler.
+6. Responda sempre em português.
 
-Por favor, confirme que entendeu estas instruções respondendo com uma breve saudação."""
+Por favor, confirme que entendeu estas instruções respondendo com uma breve saudação de boas-vindas como assistente da Therapy."""
             
-            # Envia o prompt inicial
-            chat.send_message(initial_prompt)
-        
+            # Envia o prompt inicial para obter a saudação
+            initial_response = chat.send_message(initial_prompt)
+            bot_response_text += initial_response.text + "\\n\\n" # Acumula a saudação inicial
+
+        # Continua o chat com a mensagem do usuário
         chat = chat_sessions[chat_id]
         response = chat.send_message(user_message)
+        bot_response_text += response.text # Adiciona a resposta da pergunta atual
         
         return jsonify({
-            'response': response.text,
+            'response': bot_response_text,
             'status': 'success'
         })
         

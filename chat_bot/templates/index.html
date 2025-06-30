@@ -8,39 +8,83 @@
     <title>Suporte - Therapy</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="shortcut icon" href="../../Aula2410/public/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../../chat_bot/static/style.css">
     <link rel="shortcut icon" href="../../paginas_web/01. and_icons_and_images/therapy_icon/FiveIcon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../static/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
     <header>
         <h1>Bem-vindo ao suporte da Therapy</h1>
     </header>
-    
-    <main>
-        <section id="features" class="features">
-            <h2>Como podemos te ajudar?</h2>
-            <ul class="card-list">
-                <li class="card">📞 Fale com um atendente</li>
-                <li class="card">📚 Acesse nosso FAQ</li>
-                <li class="card">🗓️ Saiba como remarcar consultas</li>
-                <li class="card">🔐 Dificuldades com login ou senha</li>
-                <li class="card">💳 Informações sobre pagamentos e planos</li>
+
+    <div class="container">
+        <aside class="sidebar">
+          <div class="logo">
+            <img src="../static/midia/therapy_icon/logo_therapy.png" alt="logo">
+            Therapy
+          </div>
+          <div class="profile-mini">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto do Psicólogo">
+            <div class="name"><a href="tela_perfil_profissional.html">Felipe Sousa</a></div>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="tela_dashboard.html"><i class="fa-solid fa-gauge icon"></i><span class="text">Dashboard</span><span class="tooltip">Dashboard</span></a></li>
+              <li class="container-submenu">
+                <a href="#"><i class="fa-solid fa-video icon"></i><span class="text">Meet</span><span class="tooltip">Meet</span></a>
+                <ul class="submenu">
+                  <li><a href="tela_historico_videochamadas.html">Histórico de Meet's</a></li>
+                </ul>
+              </li>
+              <li class="container-submenu">
+                <a href="#"><i class="fa-solid fa-briefcase icon"></i><span class="text">Gestão</span><span class="tooltip">Gestão</span></a>
+                <ul class="submenu">
+                  <li><a href="tela_gestao_documentos.html">Gestão de Documentos</a></li>
+                  <li><a href="tela_gestao_prontuario.html">Gestão de Prontuários</a></li>
+                  <li><a href="tela_gestao_financas.html">Gestão de Finanças</a></li>
+                </ul>
+              </li>
+               <li><a href="tela_historico_consultas_profissional.html"><i class="fa-solid fa-table-list"></i><span class="text">Histórico de Consultas</span><span class="tooltip">Histórico de Consultas</span></a></li>
+              <li class="container-submenu">
+                <a href="#"><i class="fa-solid fa-calendar-days icon"></i><span class="text">Agenda</span><span class="tooltip">Agenda</span></a>
+                <ul class="submenu">
+                  <li><a href="tela_calendario_agenda.html">Calendario de Consultas</a></li>
+                </ul>
+              </li>
+              <li><a href="tela_lista_paciente.html"><i class="fa-solid fa-users icon"></i><span class="text">Lista de Pacientes</span><span class="tooltip">Lista de Pacientes</span></a></li>
+              <li><a href="tela_mensagem_chat.html"><i class="fa-solid fa-comments icon"></i><span class="text">Mensagens</span><span class="tooltip">Mensagens</span></a></li>
+              <li><a href="#"><i class="fa-solid fa-gear icon"></i><span class="text">Ajustes</span><span class="tooltip">Ajustes</span></a></li>
+              <li><a href="tela_suporte_therapy.html" class="active"><i class="fa-solid fa-question"></i><span class="text">Suporte</span><span class="tooltip">Suporte</span></a></li>
             </ul>
-
-        </section>
-
-        <section id="about" class="about">
-            <h2>Sobre Nós</h2>
-            <p>
-                Nossa plataforma de terapia online oferece teleconsultas por vídeo chamada, gestão de informações das consultas e comunicação direta entre psicólogos e pacientes. Com acessibilidade ampliada, promovendo saúde mental em qualquer lugar, conectando pessoas e profissionais. Clique no botão inferior direito para iniciar uma conversa com nosso chatbot, que está disponível 24 horas por dia, 7 dias por semana.
-            </p>
-        </section>
-
-        <section>
-            <a href="../../paginas_web/01. Telas de Cadastro - Login/Profissional/tela_dashboard.html"><button class="button-exit">Sair do Suporte e voltar a tela inicial</button></a>
-        </section>
-    </main>
+          </nav>
+          <div class="logout">
+            <a href="../../paginas_web/01. Telas de Cadastro - Login/tela_de_login.html"><i class="fa-solid fa-arrow-right-from-bracket icon"></i><span class="text">Sair da Conta</span><span class="tooltip">Sair da Conta</span></a>
+          </div>
+        </aside>
+        
+        <main>
+            <section id="features" class="features">
+                <h2>Como podemos te ajudar?</h2>
+                <ul class="card-list">
+                    <li class="card">📞 Fale com um atendente</li>
+                    <li class="card">📚 Acesse nosso FAQ</li>
+                    <li class="card">🗓️ Saiba como remarcar consultas</li>
+                    <li class="card">🔐 Dificuldades com login ou senha</li>
+                    <li class="card">💳 Informações sobre pagamentos e planos</li>
+                </ul>
+            </section>
+            <section id="about" class="about">
+                <h2>Sobre Nós</h2>
+                <p>
+                    Nossa plataforma de terapia online oferece teleconsultas por vídeo chamada, gestão de informações das consultas e comunicação direta entre psicólogos e pacientes. Com acessibilidade ampliada, promovendo saúde mental em qualquer lugar, conectando pessoas e profissionais. Clique no botão inferior direito para iniciar uma conversa com nosso chatbot, que está disponível 24 horas por dia, 7 dias por semana.
+                </p>
+            </section>
+            <section>
+                <a href="../../paginas_web/01. Telas de Cadastro - Login/Profissional/tela_dashboard.html"><button class="button-exit">Sair do Suporte e voltar a tela inicial</button></a>
+            </section>
+        </main>
+    </div>
     
     <footer>
         <p>&copy; 2025 Therapy. Todos os direitos reservados.</p>

@@ -51,5 +51,17 @@ window.onload = () => {
     });
 };
 
-document.getElementById("date").innerHTML = new Date().toLocaleDateString();
-document.getElementById("time").innerHTML = new Date().toLocaleTimeString();
+function atualizarDataHora(){
+    const agora = new Date();
+    document.getElementById("date").innerHTML = new Date().toLocaleDateString();
+    document.getElementById("time").innerHTML = new Date().toLocaleTimeString();
+}
+
+// atualiza imediatamente ao carregador (é pra funcionar, eu acho)
+atualizarDataHora();
+
+// atualiza a cada segundo (por favor funcione)
+setInterval(atualizarDataHora, 1000);
+
+
+//  ps: funcionou
